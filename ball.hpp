@@ -18,5 +18,5 @@ public:
 
     void draw(sf::RenderWindow& window);
 
-    void update(const Paddle& paddle, float dt);
+    void update(Paddle& paddle, float dt);
 };

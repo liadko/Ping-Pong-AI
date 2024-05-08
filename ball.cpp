@@ -19,7 +19,7 @@ void Ball::draw(sf::RenderWindow& window)
     drawVector(position, velocity, window);
 }
 
-void Ball::update(const Paddle& paddle, float dt)
+void Ball::update(Paddle& paddle, float dt)
 {
     // raycasting for collision check
     v2f ray_origin = paddle.getLeft(), ray_dest = paddle.getRight();
@@ -52,17 +52,21 @@ void Ball::update(const Paddle& paddle, float dt)
             float t2 = (-b + root) / (2.0f * a);
             if (!(t1 > 0 && t1 < 1) && !(t2 > 0 && t2 < 1)) continue; // not a hit
 
-            v2f paddle_normal = { cosf(paddle.getRotation() + PI / 2), sinf(paddle.getRotation() + PI / 2) }; // normalized thanks to sin and cos!
+            if (dot(velocity, paddle.getNormal()) > 0)
+            {
+                cout << "flipping\n";
+                paddle.flipNormal();
+            }
 
-            if (dot(velocity, paddle_normal) > 0)
-                paddle_normal *= -1.0f;
+            v2f paddle_normal = paddle.getNormal();
 
             v2f reflected = velocity - 2.0f * dot(velocity, paddle_normal) * paddle_normal;
 
             velocity = reflected;
 
+            cout << paddle_normal.y << '\n';
 
-            //position += paddle_normal - 
+            position += paddle_normal * paddle.getSize().y / 2.0f;
 
             break; // hit executed
         }

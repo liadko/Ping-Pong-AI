@@ -13,13 +13,13 @@ private:
     // sprites
     sf::RectangleShape rect_shape;
 
-    bool normal_flipped = true;
+    bool normal_flipped = false;
     v2f normal_direction;
 
 public:
     Paddle(float x, float y);
 
-    void flipNormal() { normal_flipped ^= 1; };
+    void flipNormal();
     void rotate(float scroll, float dt);
 
     // getters
