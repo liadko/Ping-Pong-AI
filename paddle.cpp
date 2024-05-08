@@ -27,30 +27,25 @@ void Paddle::draw(sf::RenderWindow& window)
     
     drawVector(position, normal_direction, window);
 
-
-    //// raycast
-    //v2f ray_origin = getLeft(), ray_dest = getRight();
-
-    //// a
-    //v2f dir = ray_dest - ray_origin;
-    //drawVector(ray_origin, dir, window);
 }
 
 void Paddle::rotate(float scroll, float dt)
 {
     rotation += scroll * rotation_speed * dt;
 
-    // normalized thanks to sin and cos!
-    normal_direction = { cosf(getRotation() + PI / 2), sinf(getRotation() + PI / 2) };
-
-    if (normal_flipped)
-        normal_direction *= -1.0f;
+    updateNormal();
 }
 
 void Paddle::flipNormal()
 {
     normal_flipped ^= 1; 
 
+    updateNormal();
+}
+
+void Paddle::updateNormal()
+{
+    // normalized thanks to sin and cos!
     normal_direction = { cosf(getRotation() + PI / 2), sinf(getRotation() + PI / 2) };
 
     if (normal_flipped)

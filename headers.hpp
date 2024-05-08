@@ -25,6 +25,6 @@ const float TO_RADIANS = 0.01745329251f;
 
 const int WIDTH = 1280, HEIGHT = 720;
 
-const float g = 600;
+const float g = 1000;//600;
 
 #endif // !HEADERS.HPP

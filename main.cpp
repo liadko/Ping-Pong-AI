@@ -1,6 +1,5 @@
 #include "headers.hpp"
-#include "ball.hpp"
-#include "paddle.hpp"
+#include "simulation.hpp"
 
 
 // return true on success? maybe?
@@ -26,8 +25,7 @@ int main()
 void mainLoop(sf::RenderWindow& window)
 {
 
-    Ball ball({ 800, HEIGHT / 2 });
-    Paddle paddle(WIDTH / 2, 700);
+    Simulation simulation;
 
     int frame_count = 0;
     sf::Clock clock;
@@ -42,11 +40,13 @@ void mainLoop(sf::RenderWindow& window)
                 return;
             else if (event.type == sf::Event::KeyPressed)
             {
-                if(event.key.code == sf::Keyboard::Escape) return;
-                if (event.key.code == sf::Keyboard::Space) ball = Ball((v2f)sf::Mouse::getPosition(window));
+                if (event.key.code == sf::Keyboard::Escape) return;
+                if (event.key.code == sf::Keyboard::Space) 
+                    simulation.spacePressed(sf::Mouse::getPosition(window));
             }
             else if (event.type == sf::Event::MouseWheelScrolled)
-                paddle.rotate(event.mouseWheelScroll.delta, dt);
+                simulation.mouseScrolled(event.mouseWheelScroll.delta, dt);
+                
 
 
         //if (frame_count % 100 == 0)
@@ -56,9 +56,9 @@ void mainLoop(sf::RenderWindow& window)
         // Graphics
         window.clear(sf::Color::Black);
 
-        ball.update(paddle, dt);
-        ball.draw(window);
-        paddle.draw(window);
+        simulation.update(dt);
+        
+        simulation.draw(window);
 
         window.display(); // Render to screen
 

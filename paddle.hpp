@@ -26,11 +26,13 @@ public:
     v2f getPosition() const { return position; };
     v2f getSize() const { return size; };
     float getRotation() const { return rotation; };
-    v2f getNormal() const { return normal_direction; };
+
+
     v2f getRight() const { return { position.x + size.x / 2 * cosf(rotation), position.y + size.x / 2 * sinf(rotation) }; };
     v2f getLeft() const { return { position.x - size.x / 2 * cosf(rotation), position.y - size.x / 2 * sinf(rotation) }; };
 
-
+    v2f getNormal() const { return normal_direction; };
+    void updateNormal();
 
     void draw(sf::RenderWindow& window);
 };

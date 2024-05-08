@@ -19,4 +19,10 @@ public:
     void draw(sf::RenderWindow& window);
 
     void update(Paddle& paddle, float dt);
+
+    v2f getPosition() const { return position; };
+    void setPosition(const v2f& pos) { position = pos; };
+    float getRadius() const { return radius; };
+    v2f getVelocity() const { return velocity; };
+    void setVelocity(const v2f& vel) { velocity = vel; };
 };
