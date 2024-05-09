@@ -8,7 +8,9 @@ Paddle::Paddle(float x, float y) : position(x, y)
     rect_shape.setFillColor(sf::Color::White);
     rect_shape.setOrigin(size.x/2, size.y/2);
 
-    normal_direction = { cosf(getRotation() + PI / 2), sinf(getRotation() + PI / 2) };
+    //normal_direction = { cosf(getRotation() + PI / 2), sinf(getRotation() + PI / 2) };
+
+    updateNormal();
 }
 
 void Paddle::draw(sf::RenderWindow& window)
@@ -25,7 +27,12 @@ void Paddle::draw(sf::RenderWindow& window)
     // normal
     
     
-    drawVector(position, normal_direction, window);
+    drawVector(position, normal_direction, sf::Color::Blue, window);
+    
+    
+    drawVector(position, velocity, sf::Color::Red, window);
+
+
 
 }
 
@@ -34,6 +41,12 @@ void Paddle::rotate(float scroll, float dt)
     rotation += scroll * rotation_speed * dt;
 
     updateNormal();
+}
+
+
+void Paddle::setPosition(const v2f& new_pos)
+{
+    position = new_pos;
 }
 
 void Paddle::flipNormal()

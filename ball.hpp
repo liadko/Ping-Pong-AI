@@ -1,9 +1,9 @@
 #pragma once
 #include "headers.hpp"
-#include "paddle.hpp"
 
 class Ball
 {
+    friend class Simulation;
 private:
     // game state
     v2f position, velocity;
@@ -12,13 +12,14 @@ private:
     // sprites
     sf::CircleShape circle_shape;
 
+    float time_since_last_hit = 0;
 
 public:
     Ball(v2f pos);
 
     void draw(sf::RenderWindow& window);
 
-    void update(Paddle& paddle, float dt);
+    //void update(Paddle& paddle, float dt);
 
     v2f getPosition() const { return position; };
     void setPosition(const v2f& pos) { position = pos; };

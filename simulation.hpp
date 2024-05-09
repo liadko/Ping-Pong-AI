@@ -10,19 +10,24 @@ private:
     Paddle paddle;
     Ball ball;
     
-
+    const float g = 2000;
+    const float friction = 0.1f;
 
 public:
     Simulation();
     
+    void updateBall(float dt);
+    void updatePaddle(float dt);
+    bool handleHit();
 
-    void mouseMoved(const v2i& mousePosition);
-    void spacePressed(const v2i& mousePosition);
+    void handleKeys(float dt);
+    void movePaddle(const v2f& move, float dt);
+
+    void mouseMoved(const v2f& mouse_position, float dt);
+    void spacePressed();
     void mouseScrolled(int delta, float dt);
     void update(float dt);
 
     void draw(sf::RenderWindow& window);
 
-    //static methods
-    static bool handleHit(Ball& ball, Paddle& paddle);
 };

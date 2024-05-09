@@ -42,7 +42,11 @@ void mainLoop(sf::RenderWindow& window)
             {
                 if (event.key.code == sf::Keyboard::Escape) return;
                 if (event.key.code == sf::Keyboard::Space) 
-                    simulation.spacePressed(sf::Mouse::getPosition(window));
+                    simulation.spacePressed();
+            }
+            else if (event.type == sf::Event::MouseMoved)
+            {
+                simulation.mouseMoved((v2f)sf::Mouse::getPosition(window), dt);
             }
             else if (event.type == sf::Event::MouseWheelScrolled)
                 simulation.mouseScrolled(event.mouseWheelScroll.delta, dt);
@@ -51,7 +55,8 @@ void mainLoop(sf::RenderWindow& window)
 
         //if (frame_count % 100 == 0)
         //    cout << (1 / dt) << "\n";
-
+        
+        simulation.handleKeys(dt);
 
         // Graphics
         window.clear(sf::Color::Black);
