@@ -4,6 +4,7 @@
 
 Simulation::Simulation() : paddle(WIDTH / 2, 700), ball({ WIDTH/2, 200 })
 {
+    srand(time(NULL));
 
 
 }
@@ -53,13 +54,20 @@ bool Simulation::handleHit()
     
     v2f hit_direction = paddle.velocity;
 
+    cout << "Dot: " << dot(hit_direction, paddle_normal) << '\n';
+
+
     float reflection_weight = 1.0f;
     float hit_direction_weight = 1.0f;
+    
+    // small dot product, the hit is at an angle
+    if (abs(dot(hit_direction, paddle_normal)) < 1)
+        hit_direction_weight *= (0.3f + rand() / (float)RAND_MAX / 10.0f);
 
     v2f new_velocity = reflected * reflection_weight + hit_direction * hit_direction_weight;
     float ball_speed = len(new_velocity);
-    if (ball_speed > 2 * paddle.speed)
-        new_velocity = new_velocity / ball_speed * 2.0f *  paddle.speed; // set speed to paddle speed
+    if (ball_speed > 1.5f * paddle.speed)
+        new_velocity = new_velocity / ball_speed * 1.5f * paddle.speed; // set speed to paddle speed
 
     ball.setVelocity(new_velocity);
 
@@ -69,9 +77,9 @@ bool Simulation::handleHit()
     float penetration_amount = ball.getRadius() - sqrt(ball.getRadius() * ball.getRadius() - ball_slice * ball_slice);
     ball.setPosition(ball.getPosition() + paddle_normal * 2.0f *  (penetration_amount + 1.0f));
     
-    cout << "Ball Slice: " << ball_slice << '\n';
-    cout << "Pen Amount: " << penetration_amount << "\n";
-    cout << "Normal Size: " << len(paddle_normal) << "\n";
+    //cout << "Ball Slice: " << ball_slice << '\n';
+    //cout << "Pen Amount: " << penetration_amount << "\n";
+    //cout << "Normal Size: " << len(paddle_normal) << "\n";
     cout << "\n";
 
     ball.time_since_last_hit = 0;
