@@ -1,4 +1,3 @@
-#include "headers.hpp"
 #include "ball.hpp"
 #include "utils.hpp"
 

@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="neural_network.cpp" />
     <ClCompile Include="paddle.cpp" />
     <ClCompile Include="simulation.cpp" />
     <ClCompile Include="utils.cpp" />
@@ -142,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="ball.hpp" />
     <ClInclude Include="headers.hpp" />
+    <ClInclude Include="neural_network.hpp" />
     <ClInclude Include="paddle.hpp" />
     <ClInclude Include="simulation.hpp" />
     <ClInclude Include="utils.hpp" />

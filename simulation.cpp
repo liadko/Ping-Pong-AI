@@ -1,4 +1,3 @@
-#include "headers.hpp"
 #include "simulation.hpp"
 #include "utils.hpp"
 
@@ -11,7 +10,6 @@ Simulation::Simulation() : paddle(WIDTH / 2, 700), ball({ WIDTH/2, 200 })
 
 bool Simulation::handleHit()
 {
-    //if (ball.time_since_last_hit < 0.01f) return false; // no need to check again
 
     // raycasting for collision check
     v2f ray_origin = paddle.getLeft(), ray_dest = paddle.getRight();
@@ -30,7 +28,7 @@ bool Simulation::handleHit()
     float discy = b * b - 4 * a * c;
 
     if (discy <= 0) // no hit
-        return false; // check again later !
+        return false;
 
     // distance from ray_origin to ball hit location
     float root = sqrt(discy);
@@ -53,16 +51,19 @@ bool Simulation::handleHit()
     
     
     v2f hit_direction = paddle.velocity;
+    hit_direction.x *= 0.5f;
+    hit_direction.x += rand() / (float)RAND_MAX * 10;
 
-    cout << "Dot: " << dot(hit_direction, paddle_normal) << '\n';
 
-
-    float reflection_weight = 1.0f;
+    float reflection_weight = 0.9f;
     float hit_direction_weight = 1.0f;
     
     // small dot product, the hit is at an angle
-    if (abs(dot(hit_direction, paddle_normal)) < 1)
-        hit_direction_weight *= (0.3f + rand() / (float)RAND_MAX / 10.0f);
+    /*if (abs(dot(hit_direction, paddle_normal)) < 1)
+    {
+        cout << "sideways hit\n";
+        hit_direction_weight *= (0.3f +);
+    }*/
 
     v2f new_velocity = reflected * reflection_weight + hit_direction * hit_direction_weight;
     float ball_speed = len(new_velocity);
@@ -77,21 +78,14 @@ bool Simulation::handleHit()
     float penetration_amount = ball.getRadius() - sqrt(ball.getRadius() * ball.getRadius() - ball_slice * ball_slice);
     ball.setPosition(ball.getPosition() + paddle_normal * 2.0f *  (penetration_amount + 1.0f));
     
-    //cout << "Ball Slice: " << ball_slice << '\n';
-    //cout << "Pen Amount: " << penetration_amount << "\n";
-    //cout << "Normal Size: " << len(paddle_normal) << "\n";
-    cout << "\n";
 
-    ball.time_since_last_hit = 0;
-
-    return true; // hit executed, don't check again
+    return true; // hit executed
 
 }
 
 
 void Simulation::update(float dt)
 {
-    ball.time_since_last_hit += dt;
 
     updateBall(dt);
     updatePaddle(dt);
