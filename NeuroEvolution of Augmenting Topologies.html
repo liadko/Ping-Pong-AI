@@ -1,0 +1,1983 @@
+
+<!-- saved from url=(0085)https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html -->
+<html><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./NeuroEvolution of Augmenting Topologies_files/analytics.js.download" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app211.us.archive.org';v.server_ms=250;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./NeuroEvolution of Augmenting Topologies_files/bundle-playback.js.download" charset="utf-8"></script>
+<script type="text/javascript" src="./NeuroEvolution of Augmenting Topologies_files/wombat.js.download" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="./NeuroEvolution of Augmenting Topologies_files/ruffle.js.download"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.cs.ucf.edu:80/~kstanley/neat.html","20150225100420","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1424858660");
+</script>
+<link rel="stylesheet" type="text/css" href="./NeuroEvolution of Augmenting Topologies_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./NeuroEvolution of Augmenting Topologies_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>NeuroEvolution of Augmenting Topologies</title>
+
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;//linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"></script></head><body text="black" bgcolor="lightcyan" link="blue" vlink="blue" alink="aqua" data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor: #3a5146;" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjE0Iiwic2NvcmUiOjIwMDE0fV0="><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;" bis_skin_checked="1"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="">
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20150225100420/https%3A//www.cs.ucf.edu/~kstanley/neat.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://www.cs.ucf.edu/~kstanley/neat.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20150225100420"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/https://www.cs.ucf.edu/~kstanley/neat.html" title="See a list of every capture for this URL">167 captures</a><div class="r" title="Timespan for captures of this URL">6 Aug 2006 - 12 Apr 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20030701000000/https://www.cs.ucf.edu/~kstanley/neat.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="725" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px; left: 175px;"></div><div class="mt" style="display: none; width: 2px; height: 27px; left: 188px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20140712025103/http://www.cs.ucf.edu/~kstanley/neat.html" title="12 Jul 2014"><strong>Jul</strong></a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 10:04:20 Feb 25, 2015">Feb</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20150328032710/http://www.cs.ucf.edu:80/~kstanley/neat.html" title="28 Mar 2015"><strong>Mar</strong></a></td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20150222144049/http://www.cs.ucf.edu/~kstanley/neat.html" title="14:40:49 Feb 22, 2015"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0"></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 10:04:20 Feb 25, 2015">25</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20150316235813/http://www.cs.ucf.edu/~kstanley/neat.html" title="23:58:13 Mar 16, 2015"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"></a></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20140214014236/http://www.cs.ucf.edu/~kstanley/neat.html" title="14 Feb 2014"><strong>2014</strong></a></td>
+            <td class="c" id="displayYearEl" title="You are here: 10:04:20 Feb 25, 2015">2015</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20160229142259/http://www.cs.ucf.edu:80/~kstanley/neat.html" title="29 Feb 2016"><strong>2016</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color: rgb(87, 186, 244); font-size: 160%; --darkreader-inline-color: #ffffff;" data-darkreader-inline-color=""></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color: rgb(136, 136, 136); font-size: 240%; --darkreader-inline-color: #ffffe7;" data-darkreader-inline-color=""></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20150225100420/http://web.archive.org/screenshot/https://www.cs.ucf.edu/~kstanley/neat.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#" data-url="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu:80/~kstanley/neat.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color: rgb(59, 89, 152); font-size: 160%; --darkreader-inline-color: #ffffff;" data-darkreader-inline-color=""></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#" data-url="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu:80/~kstanley/neat.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color: rgb(29, 202, 255); font-size: 160%; --darkreader-inline-color: #ffffff;" data-darkreader-inline-color=""></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top: 1px solid rgb(119, 119, 119); display: none; overflow: hidden; --darkreader-inline-border-top: #b8a686;" data-darkreader-inline-border-top="">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color: rgb(102, 102, 102); color: rgb(255, 255, 255); font-weight: bold; text-align: center; --darkreader-inline-bgcolor: #958b76; --darkreader-inline-color: #ffffff;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color: rgb(51, 51, 255); --darkreader-inline-color: #e6effc;" href="https://archive.org/details/alexacrawls" target="_new" data-darkreader-inline-color=""><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 75px; background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgb(255, 255, 255) 100%); --darkreader-inline-bgimage: linear-gradient(rgba(19, 19, 16, 0) 0%, rgba(19, 19, 16, 0) 90%, #131310 100%); --darkreader-inline-bgcolor: initial;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color: rgb(51, 51, 255); --darkreader-inline-color: #e6effc;" href="https://archive.org/details/alexacrawls" target="_new" data-darkreader-inline-color=""><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 75px; background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgb(255, 255, 255) 100%); --darkreader-inline-bgimage: linear-gradient(rgba(19, 19, 16, 0) 0%, rgba(19, 19, 16, 0) 90%, #131310 100%); --darkreader-inline-bgcolor: initial;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color: rgb(102, 102, 102); color: rgb(255, 255, 255); font-weight: bold; text-align: center; --darkreader-inline-bgcolor: #958b76; --darkreader-inline-color: #ffffff;" title="Timestamps for the elements of this page" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./NeuroEvolution of Augmenting Topologies_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./NeuroEvolution of Augmenting Topologies_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print" bis_skin_checked="1">The Wayback Machine - https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu:80/~kstanley/neat.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(725,27,25,2,"web","https://www.cs.ucf.edu/~kstanley/neat.html","20150225100420",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt","https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+
+<blockquote> 
+
+<center>
+<h1> The NeuroEvolution of Augmenting Topologies (NEAT) Users Page </h1>
+</center>
+
+<center>
+    <table width="5%" border="0" cellpadding="5" cellspacing="5">
+       <tbody><tr>
+        <td width="25%" valign="top">
+        <p align="left">
+</p><center>
+<img src="./NeuroEvolution of Augmenting Topologies_files/net.jpg"> 
+<p></p> </center>
+        </td>
+        <td valign="top">
+<img src="./NeuroEvolution of Augmenting Topologies_files/speciation.jpg">
+        </td>
+      </tr>
+</tbody></table>
+
+</center>
+
+
+
+<center>
+<h3> Now there is a <a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/hyperNEATpage/HyperNEAT.html">
+HyperNEAT Users Page</a> too!
+</h3></center> 
+
+<i>
+Last Updated 12/12/14<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#updates"> (list of updates)</a> 
+</i>
+
+<br><br>
+
+I created this page because of growing
+interest in the use and implementation of the NEAT method.
+I have been corresponding with an expanding group of users.
+Because the same points come up more than once,
+it makes sense to have a place where people can come and tap into
+the expanding knowledge we have about the software and the method itself.
+
+<p>I continue to support the NEAT community from my new position
+as an assistant professor at the University of Central Florida
+in the <a href="https://web.archive.org/web/20150225100420/http://www.eecs.ucf.edu/">School of Electrical Engineering and Computer Science</a>, where my research continues as director of the 
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/">Evolutionary Complexity Research
+Group (EPlex)</a>.
+
+</p><p>We also developed an extension to NEAT called 
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/hyperNEATpage/HyperNEAT.html">HyperNEAT</a>
+that can evolve neural networks with millions of connections and
+exploit geometric regularities in the task domain.  The
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/hyperNEATpage/HyperNEAT.html">HyperNEAT Page</a> includes links to publications and a general explanation of the
+approach.
+
+
+
+</p><p><b>New!</b> So that the record of how
+I thought of NEAT is not lost, I have made available copies of the 
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/NEAT_origins/NEATorigin1.html">
+original notes from January 2000
+where I first 
+thought of NEAT</a>. It turns out that I unintentionally documented
+my own thinking process when I thought of NEAT because I was scribbling notes
+about it as I thought it through.  These are those notes, with some
+commentary to explain what I was thinking about.
+
+</p><p><b>Tutorial Available:</b> Wesley Tansey has provided a 
+<a href="https://web.archive.org/web/20150225100420/http://www.nashcoding.com/?p=90">helpful
+tutorial</a> on setting up a Tic-Tac-Toe experiment in SharpNEAT 2.  
+It should be instructive for anyone aiming to create an experiment
+in SharpNEAT.
+
+</p><p>-<a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley">Kenneth Stanley</a>
+
+</p><h4>Want to see NEAT used in a video game?  Check out 
+<a href="https://web.archive.org/web/20150225100420/http://gar.eecs.ucf.edu/">Galactic Arms Race</a> 
+or
+<a href="https://web.archive.org/web/20150225100420/http://nerogame.org/">NERO</a>.</h4> 
+
+
+<h2> Contents </h2>
+
+<p>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#intro">Introduction - </a> Which version of NEAT should you use?<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#group">NEAT Users Group - </a> Join the group to discuss your projects <br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#book">Book available with step by step chapter on NEAT</a> <br><br>  
+
+<!--
+<a href="#neatref">Online Documentation of Original NEAT C++ Code</a> <br><br> 
+-->
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#FAQ1"> NEAT Software FAQ - </a> Questions that mostly relate
+to coding issues or using the actual software.<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#FAQ2"> General NEAT Methodology FAQ - </a> More broad
+questions regarding general methodology or philosophy behind NEAT.<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#users">NEAT Users and Projects </a> <br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#future"> The Future of NEAT </a> <br><br>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#papers"> NEAT Publications </a> <br><br>
+
+<a name="FAQ1"> </a> 
+
+<a name="intro">
+</a></p><h3><a name="intro"> Introduction </a></h3><a name="intro">
+
+This page is intended for </a><a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley">
+NEAT </a>  users, particularly those using one of the available
+versions of NEAT or writing a version of their own.  Over the past
+few years, several versions of NEAT have become available for
+different platforms and languages.  The remainder of this
+introduction will introduce the available software, and attempt
+to help the user choose the right package for his or her needs.
+The current crop of NEAT software includes:
+
+<ul>
+
+<li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/http://www.cs.utexas.edu/users/nn/keyword?rtneat">
+Real-time NEAT C++ Software Package</a>. A public version of the rtNEAT source code
+used in <a href="https://web.archive.org/web/20150225100420/http://nerogame.org/">NERO</a>.  Provided with a public 
+noncommercial research license.
+Examples of real-time main loops are provided.  <br><br>
+</li><li>
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/?neat-c">
+NEAT C++ Software Package for Linux</a>. My own C++ source
+code, intended for Linux.  This 
+was the first NEAT software package available, although it has
+been updated since its original release. 
+(Fernando Torres also hosts a
+reorganized version of this code
+<a href="https://web.archive.org/web/20150225100420/https://github.com/FernandoTorres/NEAT">at github</a>.)
+<br><br>
+ 
+</li><li><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=5">
+NEAT JAVA </a> (See some <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/screenshots.html"> screenshots </a>). Ugo Vierucci wrote this
+version of NEAT based on my original C++ source code.  It includes a nice
+GUI.<br><br> 
+</li><li><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=6">
+Microsoft Windows NEAT C++ </a> (See a <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/windowsscreenshots.html">
+screenshot </a>).  Mat Buckland wrote this version of NEAT for
+Windows.  It comes with an animated minesweepers experiment. 
+A slight variant of this software comes with his <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#book">book</a>.
+
+<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/software/DelphiNEAT.zip">Delphi NEAT
+(including source code and new demos!)</a> Mattias
+Fagerlund wrote this version of NEAT in Delphi.  It includes a number
+of
+nice graphical demos of evolved behavior.  Mattias' coolest demos
+depict NEAT evolving various mobility
+strategies for 3D artificial creatures.
+<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=23">
+Matlab NEAT </a>.  Christian Mayr wrote this
+version of NEAT for Matlab.  Includes the XOR experiment.<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://sharpneat.sourceforge.net/"> SharpNEAT</a>.  Colin Green
+wrote this
+version of NEAT in C#.  Includes the XOR, predator/prey, and pole balancing experiments.<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://anji.sourceforge.net/">
+Another NEAT Java Implementation (ANJI)</a>
+Derek James and Philip Tucker wrote this alternate version NEAT in
+Java.  It includes XOR and Tic Tac Toe.
+<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://neat4j.sourceforge.net/">NEAT 4J</a>. Matt Simmerson
+produced this Java-based version of NEAT, which comes with XOR and supports
+distributed evolution over multiple processes.<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://code.google.com/p/neat-python">NEAT Python</a>.
+Cesar G. Miguel and Carolina Feher da Silva maintain this project to bring
+NEAT to Python.  XOR is included and the project continues to be developed.
+It can be checked out from the SVN repository and requires Python 2.5.<br><br>
+</li><li><a href="https://web.archive.org/web/20150225100420/http://www.heatonresearch.com/encog">Encog NEAT</a> 
+is part of
+a larger Neural Network Framework by Heaton Research.  It is licensed
+under the LGPL and is available C#, Java and Silverlight.<br><br>
+</li><li> <a href="https://web.archive.org/web/20150225100420/https://github.com/opposable/Objective-NEAT">
+ObjectiveNEAT</a> is an implementation of NEAT
+by Ben Trewhella in Objective C, supporting applications
+on Mac / iOS devices.  It comes with an implementation of XOR.
+Documentation is
+<a href="https://web.archive.org/web/20150225100420/http://www.dcs.kcl.ac.uk/pg/k1183406/ObjectiveNEAT/">here</a>.<br><br>
+</li><li> <a href="https://web.archive.org/web/20150225100420/http://xtructure.github.com/xnet-public/">XNET NEAT</a> is part of the
+XNet simulation and evolution library by Michael Roberts that is included in this package.<br><br>
+</li><li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/http://multineat.com/">
+MultiNEAT C++ with Python Bindings</a> by Peter Chervenski.
+This package includes Python bindings with pickleable
+Genomes available through Boost.Python and is heavily commented.
+Also includes HyperNEAT and novelty search implementations.<br><br>
+</li><li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/http://sourceforge.net/projects/neatvisualizers/">
+NEAT Visualizer SFML C++ </a>
+by Eric Laukien.
+Variant of NEAT with implicit speciation instead of the usual
+explicit speciation, which means that organisms are not
+explcitly grouped into species, but they can only reproduce with other
+genes that are similar enough and fitness is modified according to
+compatibility.  Includes a special visualization system
+and XOR. <br><br>
+</li><li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/http://rubyneat.com/">
+RubyNEAT</a>
+by Fred Mitchell.  The only NEAT implementation available in
+Ruby includes XOR and parity examples.<br><br>
+</li><li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/https://github.com/sean-dougherty/accneat">
+AccNEAT (accelerated NEAT)
+</a> by Sean Dougherty.  This version is an extension of the original
+C++ version by Ken Stanley but with several important changes that
+lead to significant acceleration (up to orders of magnitude).  See the link
+for more information.<br><br>
+</li><li> <b>New!</b>
+<a href="https://web.archive.org/web/20150225100420/https://github.com/lordjesus/UnityNEAT">
+UnityNEAT
+</a> by Daniel Jallov.  For those wanting to integrate NEAT
+into a gaming platform: SharpNEAT is ported in this package from
+pure C# 4.0 to Unity 4.x (using Mono 2.6).
+A <a href="https://web.archive.org/web/20150225100420/https://www.youtube.com/watch?v=sHc9u67JPWc&amp;feature=youtu.be">car
+racing demo</a> is included to make getting
+started easy.
+
+</li></ul>
+
+The question for many people first coming to NEAT is <b> which package
+is right for me?</b>  There are several factors to consider:
+
+<p>
+First, how closely does the package you want follow 
+my (Ken's) original NEAT source code?  For most people this won't
+be a big issue, since all the packages work.  However, if you
+want to strictly reproduce my experimental results, you may
+want the most faithful code available.  For this purpose,
+either my original version or Ugo Vierruci's JNEAT are probably
+the best choices, since JNEAT was written directly off of my
+original C++ source code.
+
+</p><p>
+Second, what is your favorite platform?  If you prefer Linux,
+my C++ version is appropriate.  If you prefer Windows, Mat Buckland's
+C++ would be better.  Since Java and Matlab run on all platforms,
+if you want to use Java or Matlab, platform is not a consideration.  
+SharpNEAT, written in C#, can also run on either platform. 
+
+</p><p>
+Third, what language do you prefer?  Since NEAT is available
+in C++, Java, Matlab, Delphi, and C#, there are now 
+several choices. 
+
+</p><p>
+Fourth, what experiments would you like built in?  JNEAT,
+Matlab NEAT, SharpNEAT, ANJI, and the original NEAT C++ all come with XOR.
+The original NEAT C++ and SharpNEAT also come with pole balancing.
+Windows NEAT C++ comes with a nice graphical minesweeper demo.
+Delphi NEAT has some entertaining 3D robot control experiments.
+SharpNEAT includes an incremental predator/prey experiment. 
+ANJI comes with Tic Tac Toe.
+If you are planning a new experiment, it may be helpful
+to look at the code for similar experiments.      
+
+</p><p>
+Your best option will be based on some combination of the above
+considerations.  Of course, if you want NEAT for platform X
+or language Y and they aren't available, you may want to write
+your own version of NEAT.  I am happy to hear about such projects
+so you should <a href="https://web.archive.org/web/20150225100420/mailto:kstanley@eecs.ucf.edu">let me know what you're thinking of</a>.  I can 
+give you advice or point you to any similar projects you may not be
+aware of.    
+
+<a name="group">
+</a></p><h3><a name="group"> NEAT Users Discussion Group </a></h3><a name="group">
+
+Derek James created a </a><a href="https://web.archive.org/web/20150225100420/http://groups.yahoo.com/group/neat/">NEAT Users Group</a> 
+on Yahoo to encourage
+the discussion of ideas, questions, and variations of NEAT.
+The community of NEAT users and those interested in NEAT
+can benefit greatly from the availability of this forum.    
+Please feel free to join the discussion!
+
+<a name="book">
+<h3> Paperback Book Available with Chapter on NEAT</h3>
+For people who are interested in
+learning about NEAT, but prefer explanations intended for general
+audiences to reading research-level papers, I am happy to recommend
+</a><a href="https://web.archive.org/web/20150225100420/http://www.amazon.com/exec/obidos/ASIN/193184108X/qid%3D1034633319/sr%3D1/1-1/ref%3Dsr%5F11%5F1/104-5338435-0523903">
+AI Techniques for Game Programming</a> by Mat Buckland.  Most of the
+final chapter of this book describes NEAT in a fun and simple style.
+The book also comes with source code.  This book is a good resource
+for hobbyists or video game programmers interested in AI techniques.
+(Researchers should still refer to the NEAT research publications
+available below.)  It also includes useful introductions to genetic
+algorithms and neural networks.
+Note that coding questions in the FAQ on this page 
+refer to my own source code release and not the code in this book,
+though some answers may still be useful.<br>
+
+<!--
+<a name="neatref">
+<h3> NEAT Code Documentation </h3>
+
+Ashot Petrosian compiled a very helpful Natural Docs formatted 
+<a href="http://www.freshraisins.com/neatdoc">code reference</a>
+for my original NEAT C++ code.  These pages are likely a great help
+for beginners starting to look at the inner workings of NEAT.
+-->
+
+
+<a name="FAQ1">
+<h2> NEAT Software FAQ </h2> 
+
+<i>Please note</i>:  In general, most answers refer to the original
+C++ code intended for Linux, which I
+wrote myself.  The Java code, written by </a><a href="https://web.archive.org/web/20150225100420/mailto:vierugo@yahoo.it"> Ugo Vierucci </a>, was made to
+follow the C++ code faithfully, so most answers will apply to the Java
+version as well.  However, pole balancing experiments are not
+included in the Java version so any questions on pole balancing will
+not apply to JNEAT.  <a href="https://web.archive.org/web/20150225100420/mailto:fup@ai-junkie.com">Mat
+Buckland's</a> Windows version and also 
+<a href="https://web.archive.org/web/20150225100420/mailto:matlab_neat@web.de">Christian Mayr's</a> Matlab version
+were written independently.  Therefore,
+code-related answers below probably do not apply to the Windows 
+or Matlab distributions.  
+   
+<ul>
+
+<li> <b> What is NEAT? </b> <br>
+
+<p>
+
+NEAT stands for NeuroEvolution of Augmenting Topologies.  It is a method
+for evolving artificial neural networks with a genetic algorithm.  
+NEAT implements the idea that it is most effective to start evolution
+with small, simple networks and allow them to become increasingly complex
+over generations.  That way, 
+just as organisms in nature increased in complexity
+since the first cell, so do neural networks in NEAT.  This process of
+continual elaboration allows finding highly sophisticated and
+complex neural networks.    
+
+<br><br>
+
+
+</p></li><li> <b> Will you release NEAT software? </b> <br>
+
+<p>
+
+Yes, a number of versions of NEAT are available.  Please see the <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#intro">Introduction</a>.
+
+<br><br>
+
+</p></li><li> <b> When is the next version coming out? </b> <br>
+
+<p>
+
+I don't have a specific software development schedule
+since  I am mostly focused on research.
+I will post notification when new versions become available.
+Note that a number of independent projects are ongoing,
+so other people may also be releasing their own versions of NEAT.
+I will try to make all such releases available through this page. 
+The NEAT Users Group also has new code posted occasionally. 
+
+<br><br>
+
+</p></li><li> <b> Can you notify me about updates? </b> <br>
+
+<p>
+
+There are currently a fair amount of people working on new
+NEAT software and/or experiments.  To keep up to date, I suggest 
+periodically checking this page, and also joining the <a href="https://web.archive.org/web/20150225100420/http://groups.yahoo.com/group/neat/">NEAT Users Group</a>
+run by Derek James.  
+You can also <a href="https://web.archive.org/web/20150225100420/mailto:kstanley@cs.ucf.edu">e-mail me</a>
+with software-related questions.
+</p><p>
+
+</p></li><li> <b> Does NEAT have documentation? </b> <br>
+
+<p>
+
+Yes, a 17 page documentation file is included in
+the original (and now out-of-date) <a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=4">
+C++ software release</a>.  
+The more current NEAT C++ release is at
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/?neat-c">http://nn.cs.utexas.edu/?neat-c</a>
+However, the documentation may still be helpful.</p><p>
+
+The
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=5">
+Java version </a> has its own documentation in a readme file, as well
+as a quickstart file.  The Java version is easier to get started with
+and has a nice GUI.
+The C++ version has more experiments included, and a GUILE scripting
+interface.
+
+</p><p>
+If you want to understand NEAT as a software package, I suggest
+reading the documentation in the C++ distribution whether or not you
+ultimately choose to use Java.  That doc file will give you a good
+idea of how to design your own experiments in NEAT.</p><p>
+
+The <a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=6">
+Windows version </a> comes with a short ReadMe about running
+the minesweeper experiment that it comes with.  However, you will have
+to look directly to the source code of that distribution to answer
+coding-related questions.  You can also e-mail its author, 
+<a href="https://web.archive.org/web/20150225100420/mailto:fup@ai-junkie.com">Mat
+Buckland</a>.
+
+</p><p>
+The <a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/soft-view.php?SoftID=23">Matlab version</a> also comes with a short README.  A FAQ may
+eventually be made available.
+
+<br><br>
+
+</p></li><li> <b> What are traits and how can I use them? </b> <br>
+
+<p>
+This question refers to my C++ release of NEAT, which has a vector
+of "traits" in each genome.    (JNEAT also has traits.)
+
+</p><p>
+
+If you read the 17-page  documentation, I mention that traits are not
+used in
+this release version of NEAT.  Traits are reserved for future use.  I built
+them in from the start to support some expansions I have in mind.
+In other words, they can be ignored and have no effect on anything.
+
+</p><p>
+
+However, any genome must have at least 1 trait (look at xorstartgenes
+for example, which has 3 dummy traits) in order to be valid.
+(In other words, if you create a starter (spawning) genome for some
+new experiment, it should have at least one trait, even though that
+trait means nothing.)
+
+<br><br>
+
+</p></li><li> <b>  You say traits are reserved for future use.  What will they
+be used for? </b> <br>
+
+<p>
+
+In the future, traits will allow the system to evolve highly complex
+neural models, much more sophisticated than the simple sigmoidal
+neurons currently used.  The neurons will be able to evolve
+plasticity parameters (like real neurons in the brain)
+by pointing to a trait that describes the plasticity of the neuron.
+The details will be made available as the related research
+proceeds.
+
+</p><p>
+
+<b>New:</b> Preliminary work with traits and synaptic plasticity
+has already been completed and is now reported in <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#adaptpaper">
+this paper</a>.  
+
+<br><br>
+
+</p></li><li> <b> How are networks with arbitrary topologies activated? </b>
+<br>
+
+<p>
+
+The activation function, <tt>bool Network::activate()</tt>, gives the
+specifics.  The implementation is of course considerably different
+than
+for a simple layered feedforward network.  
+Each node adds up the activation from all incoming 
+nodes from the <i>previous timestep</i>.
+(The function also handles a special "time delayed" connection,
+but that is not used by the current version of NEAT in any
+experiments that we have published.)
+Another way to understand it is to realize that activation
+does not travel all the way from the input layer
+to the output layer in a single timestep.  In a single
+timestep, activation only travels from one neuron to the next.
+So it takes several timesteps for activation to get from
+the inputs to the outputs.  
+If you think about it,
+this is the way it works in a real brain, where it
+takes time for a signal hitting your eyes to get to the
+cortex because it travels over several neural connections.
+
+<br><br>
+
+</p></li><li> <b> Can you explain some of the NEAT Parameters?  </b>
+<br>
+
+<p>Explaining all the NEAT parameters can be tricky because there are
+so many different versions of NEAT.  There are often subtle differences
+in meaning among these parameters from one version to another, even
+if they have the same name.  However,  it can still help to give
+a general idea what a certain set of parameters mean.  Therefore, I
+am posting here a copy of an answer from the NEAT Users Group to one such
+question that explains some (though not all) parameters.  
+While the particulars may not be exactly like your NEAT
+implementation, they may still help to clarify some general questions:
+</p>
+
+
+<p>
+&gt; DisjointCoefficient 2.0 [?] <br>
+&gt; ExcessCoefficient 2.0 [?] <br>
+&gt; WeightDifferenceCoefficient 1.0 [?] <br>
+
+</p><p>
+These are the standard NEAT compatibility coefficients for the compatibility
+equation the determines how far apart two individuals are for the purposes of
+speciation. In general, the question is how many gene differences are worth an
+average distance of 1.0 in weights. The numbers above say that an average
+difference of 1.0 in weights is like having two genes not shared between the 
+two
+individuals. That is pretty reasonable.
+</p>
+
+<p>
+&gt; CompatibilityThreshold 6.0 [?]
+</p>
+
+<p>
+This parameter relates to the coefficients above. It can be thought of as, how
+many genes not shared does it take for individuals to be considered in a
+different species. However, it is only relevant at the start because the next
+parameter lets it change.
+</p>
+
+<p>
+&gt; CompatibilityModifier 0.3 [?]
+</p>
+
+<p>
+This number means the threshold changes at a rate of 0.3 per generation, which
+is reasonable. It does not change if the SpeciesSize Target is already met.
+</p>
+
+<p>
+&gt; DropoffAge 15.0 [?]
+</p>
+
+<p>
+In 15 generations a species will be penalized if it is not making progress.
+</p>
+
+<p>
+&gt; SurvivalThreshold 0.2 [?]
+</p>
+
+<p>
+Only the top 20% of each species is allowed to reproduce. Controls greediness
+within species.
+</p>
+
+<p>
+&gt; MutationPower 2.5 [?]
+</p>
+
+<p>
+Mutations of weight go up to 2.5 in a single mutation. You wouldn't want it
+over 5.0 or so.  
+</p>
+
+<br> <br>
+
+</li><li> <b> How do I compile your Linux version of NEAT in such and such operating system? </b> <br>
+
+<p>
+
+As I get specific information from users about how they compiled
+under specific systems, I will post the information under this
+question.  In the meantime, I have only used NEAT in Debian
+and Red Hat Linux, and cannot comment on other systems.  Clearly,
+the INCLUDES and LIBS must be significantly altered to reflect
+the organization of your version of Linux or Unix.
+
+</p><p>
+
+<i>New: Linux NEAT in Windows</i>:  Darren Izzard wrote the following about compiling my
+C++ version of NEAT (which I wrote for Linux) under Windows:
+
+</p><p>
+"I have compiled your
+C++ version of NEAT under Windows using Cygwin without much difficulty. I
+removed the visualization code, and, as you might expect, INCLUDES and LIBS
+needed modifying a little.
+
+</p><p>
+The version of SWIG I'm using is 1.3.16 and there were two main steps
+getting it to work:-<br>
+1. Change glist() to SWIG_init() as mentioned on your site<br>
+2. Insert the following lines in neatswig.i at some point between the %} line and the class declarations:<br>
+    %nodefault Population<br>
+    %nodefault Network<br>
+
+
+</p><p>
+The output seems to require no editing, and in fact I have reinstated the
+wrapper-generating lines in the Makefile. (nb. "cp neatswig_wrap.c
+neatswig_wrap.cpp" needs changing to "cp neatswig_wrap.cxx
+neatswig_wrap.cpp" for 1.3.16.)"
+
+<br><br>
+
+</p></li><li> <b> What are "stolen babies?" </b> <br>
+
+<p>
+
+You will notice a portion of the Population::epoch() method
+that deals with babies_stolen. 
+Babies stolen is something in the code that
+we never used in experiments described in the papers.
+Babies stolen takes offspring away from bad
+species and distributes them among the best species.
+In other words, it makes the search more greedy.
+It can speed up solutions on some problems.
+The more babies stolen, the more biased the search.
+There is a global system parameter you can set in the
+".ne" files called "babies_stolen."  Any number above
+0 will cause the system to "steal" offspring rights
+from the poorer species and redistribute them to
+the better species.  The standard algorithm works
+fine with babies_stolen=0.  You can try setting it
+higher to see if it enhances performance.
+
+<br><br>
+
+</p></li><li> <b> I want to rewrite NEAT in a new programming language.  
+         Would you be interested? </b>
+
+<p>
+
+Absolutely.  <a href="https://web.archive.org/web/20150225100420/mailto:kstanley@cs.ucf.edu">Let me know your
+plans!</a>  Remember, NEAT already exists in C++, Java, and Matlab, and a
+Delphi version is partially available.
+
+<br><br>
+
+<a name="XOR">
+</a></p></li><li><a name="XOR"> <b> How should I test my own version of NEAT to make sure it works? </b>
+
+<p>
+
+Most people choose XOR as their first test.  XOR is very simple and
+does not make a very interesting scientific experiment; however, it is a good way
+to check whether your system works.  Here are some things to consider 
+if you are testing with XOR and not finding a solution:
+
+</p><p>
+
+</p></a><ul><a name="XOR">
+
+<li> Make sure recurrency is disabled for the XOR test.  If NEAT is
+able to add recurrent connections, it may solve XOR by memorizing the
+order of the training set.  (Which is why you may even want to
+randomize order to be most safe)  All documented experiments with XOR
+are without recurrent connections.  Interestingly, XOR can be solved
+by a recurrent network with no hidden nodes.
+
+</li><li> Most people report XOR is easier to solve with a steepened gain
+on the sigmoid function.
+
+</li><li> Some have suggested that a weight cap can help, though I haven't
+had a problem solving XOR without a weight cap myself.
+
+</li><li> Be careful about what you consider a 1 and what you consider a 0
+and how they are penalized/rewarded.  I generally said &lt; 0.5 is 0 and 
+&gt;= 0.5 is 1 for the purposes of a solution.  However, for the purposes
+of fitness, the distance from the actual output to the intended output
+is used, which provides a gradient.  For example 0.9 is 0.1 away from
+1.  Most people use sum squared error.
+
+</li><li> The weight mutation power is important.  You may want to fiddle
+with it a bit because sometimes it is too low or too high when you
+first set up the system.  Also, some people like to use uniform 
+mutation distributions and others use normal distributions, and the
+two distributions may benefit from different mutation powers.
+
+</li><li> If you decide to use the species compatibility coefficients and
+thresholds from my own .ne settings files (provided with my NEAT
+release), then <b>do not</b> normalize the terms in the compatibility
+function, because I did not do this with my .ne files.  In other
+words, even though my papers suggest normalizing (dividing my number
+of genes), since I didn't do that the coefficients that I used will
+not work the same for you if you normalize.  If you strongly desire to
+normalize, you will need to find your own appropriate coefficients
+and threshold.
+
+</li></a><li><a name="XOR"> Please </a><a href="https://web.archive.org/web/20150225100420/mailto:kstanley@cs.ucf.edu">let me know</a> if
+you remember any of your own problems that you eventually fixed when you were expeirmenting with XOR.
+
+</li></ul>
+<p>
+<i>Thanks to Bryan Adams, Derek James, John Arrowwood, and Colin Green for
+providing input about this question </i>
+
+
+<br><br>
+
+</p></li><li> <b> I can get xor_test and pole1_test working but pole2_test does
+not work.  What's going on? </b> <br>
+
+<p>
+You probably have the wrong starter genome
+in the file pole2startgenes.  In the documentation it mentions
+this, but it is a confusing aspect of the distribution.
+
+</p><p>
+There are 2 different kinds of pole2_test experiments:
+the markov and the non-markov.  They both
+use a <i>different</i> starter genome, because the non-markov one
+uses fewer sensors.  However, the pole2_test always
+reads from the file "pole2startgenes," no matter which
+version of the experiment you run.
+
+</p><p>
+That means the correct version must be copied into
+pole2startgenes before you begin.  Notice there are two
+files, "pole2startgenes1" and "pole2startgenes2."
+pole2startgenes1 has the right genes for the markovian
+test, whereas pole2startgenes2 has the non-markovian
+version.  So, for example,  you have to do:
+
+</p><p><tt>
+
+% cp pole2startgenes1 pole2startgenes
+
+</tt></p><p>
+
+if you are running the markovian version.
+
+</p><p>
+Of course, when you run the Markov version (which takes
+7 inputs) and run it with the 4 input non-markov network,
+it can never solve the problem and only gets up to about
+60 steps.
+
+<br><br>
+
+</p></li><li> <b>I am trying to write my own speciation code and I can't get it
+to work!  Help!</b> <br>
+
+<p>
+Well, this could mean a lot of things, but the NEAT software may be a
+good reference point for you.  Also, you may be having trouble with
+getting the right parameters.  Take a look at some of the ".ne" files
+to see good parameters for speciation.  Also, please see the next question,
+which may give you some helpful ideas.<br>
+<br>
+
+</p></li><li> <b>Is there a way to automatically set the compatibility
+threshold for speciation?  (IMPORTANT)</b> <br>
+
+<p>
+Yes, and this technique may be crucial for problems that take
+hundreds of generations or more.
+This technique keeps the number of species stable in NEAT.
+There is some commented-out code in Population::epoch that adjusts
+the compatibility threshold up or down depending on whether you have
+fewer or more than a specified target number of species::
+
+</p><p><tt>
+
+  //We can try to keep the number of species constant at this number<br>
+  int num_species_target=10;<br>
+  int num_species=species.size();<br>
+  double compat_mod=0.3;  //Modify compat thresh to control speciation<br>
+<br>
+  //Keeping species diverse <br>
+  //This commented out code forces the system to aim for <br>
+  // num_species species at all times, enforcing diversity <br>
+  //This tinkers with the compatibility threshold, which <br>
+  // normally would be held constant <br>
+  if (generation&gt;1) { <br>
+    if (num_species&lt;num_species_target) <br>
+      compat_threshold-=compat_mod; //compat_mod works well at about
+  0.3 <br>
+    else if (num_species&gt;num_species_target) <br>
+     compat_threshold+=compat_mod; <br>
+    <br>
+    if (compat_threshold&lt;0.3) compat_threshold=0.3; <br>
+
+  } <br>
+</tt></p><p>
+
+This dynamic
+thresholding allows NEAT to control the number of species, saving you
+from needing to guess the right threshold for your experiment.
+(Although you must still specify a reasonable number of species for
+your population size.)  Uncomment this code in genetics.cpp 
+in order to get the benefits of dynamic thresholding.
+
+</p><p>
+
+</p></li><li> <b> Too many genes are becoming disabled!  What should I do? </b> <br>
+
+<p>
+If you have the mutate_toggle_enable_prob too high (in your .ne file), 
+this an obvious culpit.
+
+</p><p>
+Otherwise, it may be that your task surprisingly doesn't need all the
+inputs you are providing it.  NEAT may have discovered this and
+disabled a lot of genes in order to get rid of those useless inputs.
+
+</p><p>
+It is still possible that somehow, NEAT prematurely discovered 
+genes that it disabled to get some early gains, but is having trouble
+making progress beyond that point because those genes turned out to
+be needed in the long run.  In such a situation (which I have found
+to be rare) you may want to edit the mating code such that 
+disabled genes are only disabled in the offspring if they are
+disabled in the <i>more fit parent</i>.  This fix will keep the
+disabling of genes to a minimum.
+
+</p><p>
+Note that genes in NEAT often become reenabled in mating, because
+there is a built-in probability that genes will become reenabled
+during mating even if they are disabled in one or more parent.
+</p><p>
+
+One user suggested that instead of disabling genes, they can be reset
+to a 0 weight, and gradually climb back into significance.  I have
+not tried this idea but you may want to play with it if you have time.
+</p><p>
+
+</p></li><li> <b> NEAT takes up too much memory.  Can I save memory somehow? </b> <br>
+
+<p>
+Yes.  Look at this constructor inside the Organism class (from the C++
+code; the Java code should be similar):</p><p>
+
+<tt>
+  Organism(double fit, Genome *g,int gen) { <br>
+    fitness=fit;<br>
+    orig_fitness=fitness;<br>
+    gnome=g;<br>
+    net=gnome-&gt;genesis(gnome-&gt;genome_id);<br>
+    species=0;  //Start it in no Species<br>
+    expected_offspring=0;<br>
+    generation=gen;<br>
+    eliminate=false;<br>
+    error=0;<br>
+    winner=false;<br>
+    champion=false;<br>
+    super_champ_offspring=0;<br>
+<br>
+    //DEBUG vars<br>
+    pop_champ=false;<br>
+    pop_champ_child=false;<br>
+    high_fit=0;<br>
+    mut_struct_baby=0;<br>
+    mate_baby=0;<br>
+  }<br>
+</tt>
+</p><p>
+
+Note the line:
+
+<tt>
+ net=gnome-&gt;genesis(gnome-&gt;genome_id);
+</tt>
+
+What this means is that as soon as an organism is 
+created (inside the reproduce method) with its
+constructor, its respective network is <i>also</i> created
+through genesis.  In other words, all phenotypes
+are represented in memory <i>simultaneously,</i> even though
+they don't have to be.  In most cases, 
+you only need 1 phenotype (network) represented in memory at a
+time, at the time of evaluation.
+
+</p><p>
+Therefore, you simply need to change the constructor
+and comment out the genesis line.  Instead, perform
+genesis immediately preceding evaluation of an
+organism, and then, immediately after that, delete
+the network.  Thus, networks are created and destroyed 
+serially, freeing up an enormous amount of space.
+You will notice 50-75% memory usage reductions.
+(The next release of NEAT will work this way, but it's easy enough
+to edit the code in the version you have.  Note that
+the provided experiments in general do not take up very much memory
+and thus won't need this fix.  However, if you are using massive
+populations or working in high-dimensional domains, it may help
+you a lot!) 
+</p><p>
+
+</p></li><li> <b> How do I get SWIG to work? </b> <br>
+
+<p>
+First, <a href="https://web.archive.org/web/20150225100420/http://www.swig.org/"> download the latest version</a>.
+If you are still having problems, make sure you read the SWIG-related
+documentation in the 17-page doc file that came with C++ NEAT.
+</p><p>
+
+SWIG is buggy in my experience.  You may have to play around to
+get casts right and functions names may change with different
+versions.  Different C++ compilers may react differently to the same
+SWIG code.</p><p>
+
+One important problem that has been pointed out:  SWIG may replace 
+underscores "_" with hyphens "-", causing great confusion!  If you
+are trying to run "pole2_test", for example, and it is not working,
+SWIG may have changed the name to "pole2-test."
+
+The following also may help (from a NEAT user who had SWIG problems):</p><p>
+
+"The version of SWIG I have generates a function called SWIG_init()
+instead of glist(). I've replaced the code in neatmain.cpp with the following, and now it compiles":</p><p>
+
+<tt>
+extern "C" { <br>
+        extern void SWIG_init(void); <br>
+};<br>
+<br>
+void<br>
+main_prog(int argc, char *argv[])<br>
+{<br>
+    SWIG_init();<br>
+    scm_shell(argc, argv);<br>
+}<br>
+</tt>
+</p><p>
+
+</p></li><li> <b> How do I ensure that a network stabilizes before taking its
+output(s) for a classification problem? </b> <br>
+
+<p>
+The cheap and dirty way to do this is just to activate n times in a
+row where n&gt;1, and hope there are not too many loops or long pathways
+of hidden nodes.
+
+</p><p>
+The proper (and quite nice) way to do it is to check <i>every</i>
+hidden node and output node from one timestep to the next, and
+see if nothing has changed, or at least not changed within some delta.
+Once this criterion is met, the output must be stable.
+
+</p><p>
+Note that output may not always stabilize in some cases.  Also, for 
+continuous control problems, <i>do not</i> check for stabilization as
+the network never "settles" but rather continuously reacts to a
+changing environment.  Generally, stabilization is used in
+classification problems, or in board games. 
+</p><p>
+
+</p></li><li> <b> Why is there no hard bound to the maximum and minimum
+possible connection weight strengths? </b> <br>
+
+<b>Please note:</b> The short answer to this question is that
+there really should be a bound.
+
+<p>
+The mutation strength itself basically causes a natural soft
+bound to arise on its own.  By imposing your own bounds, you may have
+created a range that is intolerant to the strength of your mutation
+operator.  Note that it is the relative strengths of weights that matters
+towards creating their functionality, so no bound is necessary.
+<i>However,</i> networks with low bounds on weights will tend to
+produce smoother output (i.e. numbers between 0 and 1 rather than only
+0 and 1).  
+If you must have a bound, you need to be careful it is high enough to
+allow several weight mutations to carry you from 0 to either the higher
+or lower bound (you don't want your smallest mutations to cause radical
+relative differences).  In very long evolutionary runs (say 500 or
+more generations), a limit may be helpful in preventing some
+connections from becoming so powerful that new connections cannot
+hope to compete.  It is a simple matter to
+put in hard bounds if you desire.  
+</p><p>
+
+Here is some code to put in bounds.  It can be inserted at the end of
+mutate_link_weights:
+</p><p>
+<tt>
+//Cap the weights at 8.0 (experimental)<br>
+if (((*curgene)-&gt;lnk)-&gt;weight&gt;8.0) ((*curgene)-&gt;lnk)-&gt;weight=8.0;<br>
+else if (((*curgene)-&gt;lnk)-&gt;weight&lt;-8.0) ((*curgene)-&gt;lnk)-&gt;weight=-8.0;
+</tt>
+<br>
+<br>
+
+</p></li><li> <b> Are there any heuristics for deciding on the weight mutation rate?
+</b> <br>
+
+<p>
+Preliminary experiments indicate that high weight mutation
+rates (i.e. 50% or more) are useful for control tasks, but lower rates 
+(i.e. under 1%) are more 
+appropriate for high input games like Othello.  It may 
+be that the number of inputs is the critical factor, and that
+low-input tasks respond better to high mutation weights.
+Although I do not have concrete statistics from which to draw
+strong conclusions, a good rule of thumb is to change the weight
+mutation rate if the systems seems to be performing below
+expectations.  
+
+<br><br>
+
+
+</p></li><li> <b> Can the speciation code be made more efficient?
+</b> <br>
+
+<p>
+Since the NEAT algorithm in general takes up far less computation
+time than the actual evaluations in the task, improving the
+code's efficiency is not an urgent need.  However, there is
+a clever way to make speciation faster.  Thanks to Mattias 
+Fagerlund for this idea:
+
+</p><p>
+"If you add a species hint to your individuals, 
+speciation runs <i>much</i> faster. When a child is created, copy the species of 
+the mother into the species_hint of the child. When it's time to place 
+the child in a species, first try the species hint. If the child belongs 
+there, then we're ready. If it doesn't test all species and pick the 
+first species that's compatible. Since the speciating events are few and 
+far between, each individual will be tested against 1 species instead of 
+maybe 13-30 species. If the number of species is great, the saving can be 
+great too."
+
+<br><br>
+
+<a name="disconnected">
+</a></p></li><li><a name="disconnected"> <b> Can I start NEAT with some inputs disconnected? (IMPORTANT) 
+</b> <br>
+
+</a><p><a name="disconnected">
+The reason this question is important is that if we can start NEAT
+with some inputs disconnected, then we can allow NEAT to decide which
+inputs are important.  This process has two good effects: (1) You
+can start minimally <i> even in </i> problems with many inputs and (2)
+you don't need to know a priori what the important features of
+the domain are.  Recent results (2005) reported in
+</a><a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#feature_selection">this paper</a> suggest that this approach
+can be quite effective.
+
+</p><p>
+Unfortunately, my C++ version of NEAT, Ugo's JNEAT, and possibly other 
+versions cannot automatically start this way, even if given a genome
+with some nodes disconnected.  The reason is that in crossover,
+NEAT was originally designed to drop nodes that aren't connected
+to the network.  Therefore all the disconnected inputs would be lost   
+forever.
+
+</p><p>
+However, NEAT can easily be fixed to allow starting this way.
+All that needs to be done is to insert some code into the mating
+routines that ensures all nodes get inserted into the offspring's
+genome:
+
+<br><br>
+<tt>
+  //NEW: Make sure all sensors and outputs are included<br>
+  for(curnode=(g-&gt;nodes).begin();curnode!=(g-&gt;nodes).end();++curnode) <br>
+  {<br>
+    if ((((*curnode)-&gt;gen_node_label)==INPUT)|| <br>
+    (((*curnode)-&gt;gen_node_label)==BIAS)||<br>
+    (((*curnode)-&gt;gen_node_label)==OUTPUT)) {<br>
+      if (!((*curnode)-&gt;nodetrait)) nodetraitnum=0;<br>
+      else<br>
+        nodetraitnum=(((*curnode)-&gt;nodetrait)-&gt;trait_id)-(*(traits.begin()))-&gt;trait_id;<br>
+<br>
+      //Create a new node off the sensor or output<br>
+      new_onode=new NNode((*curnode),newtraits[nodetraitnum]);<br>
+<br>
+      //Add the new node<br>
+      node_insert(newnodes,new_onode);<br>
+<br>
+    }<br>
+<br>
+  }<br>
+
+</tt>
+  <br>
+In my C++ code, this must be placed in mate_multipoint,
+mate_multipoint_avg, and mate_singlepoint.  (Note that in general
+no one uses mate_singlepoint so if you don't use it, you don't
+need to worry about it.)  A similar piece of code would need
+to be inserted into JNEAT's corresponding functions.
+
+</p><p>
+The place to put the code in mate_multipoint is right after the
+section starting with the comment, <tt>"Figure out which genome is better,"</tt>
+that ends with <tt>"else p1better=false."</tt> (Near the beginning of 
+mate_multipoint.)  In mate_multipoint_avg, it should be placed
+after the line <tt>"avgene=new Gene(0,0,0,0,0,0,0);"</tt>.
+
+</p><p>
+The insertion of this code will now allow you to start with genomes
+with some inputs disconnected, and NEAT will add inputs as it
+sees fit!  
+
+</p><p>
+<b>Additional code:</b> One nice mutation which that be helpful
+if you start with some sensors disconnected is an add_sensor
+mutation, which immediately connects a randomly chosen sensor
+which was previously disconnected to all the outputs at once.
+That way, the sensor can be fully integrated immediately.  
+Here is <a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley/mutate_add_sensor_java">Java
+code
+for JNEAT </a> by Shimon Whiteson and 
+<a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley/mutate_add_sensor">
+C++ code for Ken's original NEAT</a>  
+(translated from Shimon's code by Ken) that give NEAT this new kind
+of mutation.  Note that the call for this mutation still must be
+added to Species::reproduce in order for NEAT to use it!   
+
+</p><p>
+<b>More information: </b> The newer rtNEAT code distirbution includes the above
+fixes.  However, Peter Chervenski notes an additional possible problem and
+its fix:
+<br>
+Consider a network with no genes at all - where even a single link does not exist. In the first few generations, there are such networks - due to the very small probability for adding a link. When mutate_add_node() is called for such a genome, something happens or it just tries to traverse the genes vector, but there is nothing to be split. So I added this line of code (before everything in the function):
+
+<br><br>
+<tt>
+// there is no link to split<br>
+if (this-&gt;genes.size() == 0) return false;
+</tt> 
+
+
+<br><br>
+
+</p></li></ul>
+
+
+
+<a name="FAQ2"> </a>
+<h2> General NEAT Methodology FAQ </h2> 
+
+This FAQ addresses questions that are more abstract or philosophical
+in nature.
+
+<ul>
+
+<li> <b> Can you tell me more about speciation and how your method of
+speciation compares to other methods?  </b> <br>
+
+<p>
+
+If you look in the references section
+of <a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:alife03">
+our paper</a>, you will notice a reference to "Mahfoud," which you
+can get off of Citeseer.  This dissertation is probably the single best
+review of speciation methods that exists.
+
+</p><p>
+That said, the history of speciation is mostly in the area
+"Multi-modal function optimization," where evolution is looking for
+multiple solutions at the same time.  For example, you might
+want to find several optima for a problem, or several solutions
+that can work together to form a supersolution.
+
+</p><p>
+In contrast, NEAT uses it for a much different purpose, which is
+protecting innovation.  You might wonder why no one
+has used speciation for this purpose in neuroevolution before
+(in fact, I am not sure if it has been used explicitly for
+this purpose at all in the past).   The reason is that
+neural networks previously seemed virtually impossible to compare,
+particularly when their topologies differed.  In order
+to speciate, there needs to be some distance metric, but if
+you have no idea how two genomes compare with one another, there
+is no hope for comparison.  Historical markings suddenly made
+comparison easy, changing the entire problem.
+In addition, perhaps people did not identify
+the need for speciation in neuroevolution.  
+
+</p><p>
+You may want to know why we used speciation over
+the Island model (or any other model- many exist).  The answer
+is that speciation is very natural- it is much the way
+it works in the real world.   The main point is that
+in our speciation model, species arise for intrinsic reasons.
+In other words, the species "just pop up on their own,"
+naturally, rather than being imposed extrinsically, from
+the outside, as in the island model.  No one
+knows what species or how many species should arise,
+so NEAT lets evolution sort it out.  If a new species appears,
+the system detects it and separates it out.  If a species gets good,
+NEAT lets it grow relative to other species.  This is opposed to
+models where the programmer decides what the species
+are, how big they are, etc..
+
+<br><br>
+
+</p></li><li> <b> Is NEAT similar to the GEP method of Genetic Programming? </b> <br>
+
+<p>
+A description of the GEP method can be found <a href="https://web.archive.org/web/20150225100420/http://www.gene-expression-programming.com/webpapers/gep.pdf">
+here </a>.  The paper is referenced:
+
+</p><p>
+Ferreira, C., (2001). Gene Expression Programming: A New Adaptive
+Algorithm for Solving Problems, Complex Systems, 13 (2): 87 - 129.
+
+</p><p>
+
+I will contrast the methods.  GEP evolves program trees
+while NEAT evolves neural networks, but since both evolve structures
+they are worth comparing.
+
+</p><p>
+On the surface GEP has several similarities to NEAT:
+
+</p><ul>
+<li>Evolves structure to some extent (up to a fixed size, unlike NEAT)
+</li><li>linear chromosomes
+</li><li>Preserves syntactic correctness
+</li></ul>
+
+<p>
+However, the differences are very significant:
+
+</p><ul>
+<li>In GEP, chromosomes have fixed length.  Complexification is not
+ possible.  GEP does what almost every other structure evolving
+ system does, which is arbitrarily permute over different structures
+ in no particular direction (either from more complex to less, or less
+ comples to more).
+
+</li><li>Although syntactic correctness is preserved (which is 
+ a gain in the Genetic Programming world), there is no
+ provision for preventing radically different parents from mating.
+ (i.e. the analogue of the competing conventions problem for GP's
+   still exists)  In other words, there is nothing like NEAT's
+ historical marking mechanism.
+
+</li><li>There is no speciation, and no forseeable systematic method for
+  speciating under the GEP framework, so innovation cannot be
+  protected and, as in the last point, many innappropriate
+  crossovers will occur.
+</li></ul>
+
+<p>
+It is clear that the authors had a similar vision in mind when
+they created this algorithm to what I was aiming for with NEAT,
+but the algorithms are quite different in the end.  It does
+bring up the possibility of applying NEAT to evolving non-neural
+structures such as genetic programs, since NEAT is in principle
+a general algorithm for evolving structure.
+
+<br><br>
+
+</p></li><li> <b> Does NEAT solve the competing conventions problem?
+</b> <br>
+
+<p>
+First let me clarify, as Darrell Whitley pointed out, the competing
+conventions problem is the problem of having the same functionality
+represented by different permutations of the same set of
+connection weights.  Thus, NEAT is addressing a broader problem,
+which really should be termed the "variable length genome problem,"
+which arises from having different topologies and weight
+configurations in the same population.
+
+That said, the variable length genome problem is the problem of crossing over
+or comparing neural networks (or other structured phenotypes)
+with different topologies and weights that implement similar functionalities.  NEAT's method of matching up genomes
+and measuring compatility for speciation using historical markings 
+may be considered a "solution" to the problem of variable length genomes
+in the sense that any two genomes can now be matched up in the most
+sensible manner possible no matter how divergent their topologies,
+and NEAT can also be considered a solution because genomes that are
+too divergent are not allowed to mate at all, avoiding
+incompatibilities.  However, in another sense, one could say that
+the variable length genome problem can never be "solved" because
+it is inherent in any system that generates different constructions
+that solve the same problem.  For example, both a bird and a bat
+represent solutions to the problem of flight, yet they are not
+compatible since they are different conventions of doing the
+same thing.  The same situation can happen in NEAT, where very different
+structures might arise that do the same thing.  Of course,
+such structures will not mate, avoiding the serious consequence of
+damaged offspring.  Still, it can be said that since disparate
+representations can exist simultaneously, incompatible genomes are still
+present and therefore the problem is not "solved."  
+Ultimately, it is subjective
+whether or not the problem has been solved.  It depends on what you
+would consider a solution.  However, it is at least correct to
+say, "the problem of variable length genomes is <i>avoided</i>."
+
+</p><p>
+Note that for those who do not consider NEAT a solution, it follows
+that nature also does not solve the problem,
+since disparate solutions exist in nature.  This line of thought
+generally implies that nothing can solve the variable length genome problem.  
+
+<br><br>
+
+</p></li><li> <b> What if I want to evolve a network with
+self-similarities/symmetries/repeating patterns? </b> <br>
+
+<b>New</b> It turns out that you can do this kind of evolution
+with NEAT. 
+A recent theory (2006) explaining how is
+in our paper, <a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/index.php?option=com_content&amp;task=view&amp;id=14&amp;Itemid=28#stanley.gpem07">
+Compositional Pattern Producing Networks: A Novel Abstraction of Development
+</a>. 
+
+<p>A broad review is in our
+paper, <a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:alife03">A Taxonomy for Artificial Embryogeny</a>.
+<br><br>
+
+</p></li><li> <b> Why does NEAT use a bias node instead of having a bias
+parameter in each node? </b> <br>
+
+<p>
+Mainly because not all nodes need a bias.  Thus, it would
+unnecessarily enlarge the search space to be searching for a proper
+bias for every node in the system.  Instead, we let evolution decide 
+which nodes need biases by connecting the bias node to those nodes.
+This issue is not a major concern; it could work either way.
+You can easily code a bias into every node and try that as well.
+<br><br>
+
+</p></li><li> <b> Have you tried using non-sigmoid activation functions? </b> <br>
+
+<p>
+Yes, that is what CPPNs do.  See 
+ <a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/index.php?option=com_content&amp;task=view&amp;id=14&amp;Itemid=28#stanley.gpem07">
+Compositional Pattern Producing Networks: A Novel Abstraction of Development
+</a>.
+
+</p><p>
+The kinds of activation functions 
+available to NEAT biases the kinds of functions it is likely to evolve.
+As in all machine learning, the right bias (if you can find it) provides
+and advantage. 
+<br><br>
+
+</p></li><li> <b> How does NEAT avoid bloat? </b> <br>
+
+<p>
+For those who don't know, bloat is a major problem in Genetic
+Programming (GP) that results from genomes getting bigger and bigger
+without any corresponding increase in fitness, leading to unwieldy programs
+that cannot be optimized further.  </p><p>
+
+GP permutes through different structures of widely varying size
+and topology.  NEAT does not permute in this way.  Rather, it builds up
+structures slowly, piece by piece, each piece being tested carefully.
+As structures diverge in NEAT, they are placed into different species
+so they won't interfere with each other.  Thus there are multiple
+simultaneous and divergent lines of principled build-up of structure.
+Such an approach is more bloat-proof.  
+Also, crossover in NEAT is itself bloat-proof, since it does not
+involve tacking on arbitrary trees of structure from widely varying topologies.
+Finally, the way NEAT is implemented, it only adds excess or disjoint
+genes from the more fit parent in a crossover of genomes with
+divergent histories.  Therefore, you don't get excess baggage from
+inferior solutions.
+</p><p>
+There is another important reason that NEAT avoids bloat that I
+did not mention above.  <i>As long as a network represented by a small
+number of genes is competitive, its species will survive in the
+population.</i>  In other words, if a species of small genomes "bloats"
+through some genetic cause such as mutation or crossover, the new
+bloated offspring will end up in a different species.  Unless the
+new species is superior to the old one, the old species will survive
+unbloated and separated from its more bloated successor.  Only when
+a more complex species displays superior performance will the
+less bloated species become obsolete and begin to shrink.
+Thus, unbloated species stick around for as long as they can perform
+well.  The moral: Speciation prevents bloat!
+</p><p>
+
+</p></li><li> <b> How can NEAT "start minimally" in a high-input/high-output domain? </b> <br>
+
+<p>
+Recall that "starting minimally" means beginning evolution with a
+population of networks with minimal structure.  In the experiments in
+our papers so far, "minimal structure" means no hidden nodes.
+However, in domains with a very large number of inputs and/or outputs,
+things get weird.  Let us say you have 50 inputs and 50 outputs, which
+might be reasonable for a board-game type domain.  Then if you
+start with networks with only direct connections, you would have 2,500 
+connections.  In contrast, a network with 5 hidden nodes would
+have only 50*5+5*50=500 connections.  So at a certain point, when
+the input/output space becomes quite large, the <i>meaning</i> of
+a minimal network changes.  In general this happens when a reasonable
+number of hidden nodes for solving the task is significantly lower
+than the number of inputs and/or outputs.  
+
+</p><p>
+The conclusion is that you need to be creative about the topologies
+of your initial population in such high-dimensional domains.  
+One option, which has not been explored much, is to begin with a fully-connected 
+network of a few hidden nodes and <i>without</i> direct connections.
+Direct connections will then evolve on their own, and new nodes will
+be added as needed.
+
+</p><p>
+That said, the real answer is that if you are starting with a
+lot of inputs and outputs fully connected, then you are violating the principal
+of starting minimally!  
+However, to be true to the NEAT method, the more appropriate 
+approach would be to start with only a subset of the total inputs
+and outputs, and allow evolution to add inputs and outputs as it sees
+fit, as they help increase fitness.  My current software distribution
+does not implement this idea, but if you are working in such domains,
+you should consider that it is really the most appropriate approach,
+and perhaps you should consider implementing it before proceeding.
+Question <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#disconnected"> "Can I start NEAT with
+some inputs disconnected?" </a> above gives the code necessary to
+start this way, with some inputs not present in the initial genome.
+<b>Update: </b> Based on recent results (2005), starting with many
+inputs disconnected appears to be a powerful and effective approach.
+See <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#feature_selection">this paper</a> for more info on
+these results.  
+
+</p><p>
+Here is a tip for game-playing domains:  If you have, say, a board
+with n possible positions, you can get away with only 1 output instead
+of n outputs by moving all n outputs to the inputs.  You 
+concatenate these n extra inputs with the 2n (or however many) normal
+inputs you have for specifying board position.  We will call the new
+n inputs, "candidate inputs."   Interpret
+the single output as answering the question, "Should I move to
+position [the current 1 of n candidate inputs nodes that is active]?"  
+So you would poll the network for every possible move of the n candidate
+moves, and see which one it likes best.  If you try this idea, let
+me know how it compares to the standard n-output method of deciding
+the next move since I don't know of much research on this idea.
+It greatly reduces the number of connections needed to represent a solution.
+</p><p>
+
+<a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#go">This paper</a> explains yet another approach to 
+dealing with high input/output domains: instead of evolving a complete
+set of inputs for the whole field of a game, you can evolve a smaller 
+"roving eye" that scans the board at will.     
+
+<br><br>
+</p></li><li> <b> Should a record of innovations be kept around forever, or
+only for the current generation?
+</b> <br>
+
+<p>
+In my implementation of NEAT, the record is only kept for a generation, but there
+is nothing wrong with keeping them around forever.  In fact,
+it may work better.  Here is the long explanation:
+</p><p>
+The reason I didn't keep the record around for the entire
+run in my implementation of NEAT was because I felt that calling
+something the same mutation that happened under completely different 
+circumstances was not intuitive. That is, it is likely that several generations
+down the line, the "meaning" or contribution of the same connection
+relative to all the other connections in a network is different than
+it would have been if it had appeared generations ago.
+I used a single generation as a yardstick for this kind of situatiom,
+although that is admittedly ad hoc.
+</p><p>
+That said, functionally speaking, I don't think there is anything
+wrong with keeping innovations around forever.  The main effect is
+to generate fewer species.  Conversely, not keeping them around leads to 
+more species..some of them representing the same thing but
+separated nonetheless.  It is not currently clear which method produces
+better results under what circumstances.  
+</p><p>
+Note that as species diverge, calling a connection that appeared in one
+species a different name than one that appeared earlier in another
+just increases the incompatibility of the species.  This doesn't
+change things much since they were incompatible to begin with.  On the other
+hand, if <i>the same</i> species adds a connection that it added in an
+earlier generation, that must mean some members of the species had
+not adopted that connection yet...so now it is likely that the first
+"version" of that connection that starts being helpful will win out,
+and the other will die away.  The third case is where a connection
+has already been generally adopted by a species.  In that case, 
+there can be no mutation creating the same connection in that species
+since it is already taken. The main point is, you don't really expect too
+many truly similar structures with different markings to emerge,
+even with only keeping the record around for 1 generation.
+</p><p>
+Which way works best is a good question.  If you have any interesting
+experimental results on this question, please let me know.
+
+<br><br>
+
+</p></li><li> <b> Is there another way to do fitness sharing?
+</b> <br>
+
+<p>
+Yes.  It turns out that the number of offspring alotted to a species
+using fitness sharing as I implemented it is
+equivalent to the following: 
+</p><p>
+<tt>
+Offspring = (AverageSpeciesFitness / Total_of_AverageSpeciesFitnesss) * 
+PopulationSize
+</tt>
+</p><p>
+Note that this treatment penalizes species that have very high
+quality solutions if they also have poor solutions.  That means that
+species need to produce consistently good solutions in order to
+survive, rather than just produce one rare good solution.
+It is possible that the maximum species fitness could be used
+instead of the average fitness, which would result in this
+equation:
+</p><p>
+<tt>
+Offspring = (MaxSpeciesFitness / Total_of_AverageSpeciesFitnesses) * 
+PopulationSize
+</tt>
+</p><p>
+In this case, species with a single very good member would be
+highly rewarded.  It is not immediately clear which method
+is better, but both the latter is certainly worth trying.
+Note that rewarding species based on their max fitness means
+investing in solutions that may be very inconsistent.
+In other words, if the best member of a species consistently
+produces poor offspring, the algorithm will not detect this.
+Thus, there may be an advantage to using the average fitness
+as my implementation of NEAT does, since it promotes more
+robust solutions.  However, on the other hand,
+the downside of using the average fitness is that we might miss
+very good peak solutions because they happen to be occur in
+species that otherwise contain many mediocre or poor solutions.
+Thus, there appears to be a trade-off between the two
+strategies and further research is warranted.
+In preliminary experiments, Mattias Fagerlund reported no
+noticable difference between the two alternatives.
+</p><p>
+A possible compromise is to take the average of only the
+top n% of a species (those members that get to reproduce).  
+<br><br>
+
+</p></li><li> <b> Is there a way to use negative fitnesses in NEAT?
+</b> <br>
+
+<p>
+You may have noticed that if you try to use negative fitnesses,
+NEAT breaks down because of fitness sharing, which requires
+positive fitness values.  
+</p><p>
+Real Carbonneau suggested the following solution to this problem:
+Compute fitness as you wish, with negative values if desired.
+Then, adjust all the fitnesses by replacing them with the
+distance between the actual fitness and the lowest fitness
+in the population.  This will scale all the fitnesses above zero,
+keeping the relationships stable. 
+
+<br><br>
+
+
+</p></li></ul>
+
+ <a name="users"> </a>
+<h2> NEAT Users and Projects </h2>
+
+There is so much work going on with NEAT that I have stopped 
+trying to keep track of it here. 
+Instead, one way to find information projects with NEAT
+(aside from the several NEAT packages available) is to
+<a href="https://web.archive.org/web/20150225100420/http://www.google.com/search?source=ig&amp;hl=en&amp;rlz=&amp;q=%22Augmenting+Topologies%22">search Google for "Augmenting Topologies"</a>
+or to <a href="https://web.archive.org/web/20150225100420/http://scholar.google.com/scholar?source=ig&amp;hl=en&amp;rlz=&amp;q=%22Augmenting+Topologies%22&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;tab=ws">
+search Google Scholar for  
+"Augmenting Topologies"</a> also.
+
+<a name="future"> </a>
+<h2> The Future of NEAT </h2> 
+
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/hyperNEATpage/HyperNEAT.html">Hypercube-based NEAT (HyperNEAT)</a> is the future of NEAT. 
+
+<p>HyperNEAT software and source has also become available:<br>
+</p><ul>
+<li> <a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/index.php?option=com_content&amp;task=view&amp;id=17&amp;Itemid=32#hypersharpneat">HyperSharpNEAT C#</a> by
+David D'Ambrosio.  This package extends Colin Green's SharpNEAT to
+run as HyperNEAT.  A scalable robot food gathering domain is included.<br><br>
+</li><li> <a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/index.php?option=com_content&amp;task=view&amp;id=17&amp;Itemid=32#hyperneat1">HyperNEAT C++</a> by Jason Gauci.  
+Includes the
+scalable big box/little box visual discrimination task and a convenient
+GUI for exploring the substrate.
+</li></ul>
+
+ 
+
+
+
+<h2> NEAT Publications </h2> <a name="papers"> </a>
+
+<h4>
+<b>Note</b> More recent papers from after I moved to UCF are
+<a href="https://web.archive.org/web/20150225100420/http://eplex.cs.ucf.edu/Publications/">here</a>.
+</h4>
+
+<p>
+<i> Note: The last three papers are the best introduction to NEAT</i>
+</p><p>
+The following papers talk about the NEAT method.  I conclude each
+reference with some commentary describing what the paper is about.
+The links also lead to abstracts before you download the papers.
+<a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley"> My homepage </a>
+has links to all my papers, including papers not specifically
+about NEAT.
+</p><p>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:phd04">
+<b>Ph.D. Dissertation: EFFICIENT EVOLUTION OF NEURAL NETWORKS THROUGH
+COMPLEXIFICATION </b></a> <br>
+Kenneth O. Stanley<br>
+Department of Computer Sciences, The University of Texas at Austin<br>
+Technical Report~AI-TR-04-39, August 2004.<br>
+<b>Comment</b>: Extensive descriptions of both the NEAT method and
+associated experiments.  180 pages.
+
+<br> <br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:cig05"> <b>EVOLVING
+    NEURAL NETWORK AGENTS IN THE NERO VIDEO GAME</b></a><br>
+    Kenneth O. Stanley, Bobby D. Bryant, and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at
+    Austin<br>
+    <cite>Proceedings of the <a href="https://web.archive.org/web/20150225100420/http://csapps.essex.ac.uk/cig/">IEEE 2005 Symposium o
+n Computational Intelligence and Games
+    (CIG'05)</a></cite>. Piscataway, NJ: IEEE, 2005.<br><b>Winner of
+    the Best
+    Paper Award at CIG'05</b><br>
+<b>Comment</b>: This 8-page paper describes how NEAT was adapted
+to work in real-time in the <a href="https://web.archive.org/web/20150225100420/http://nerogame.org/">NERO</a>
+video game. 
+<br><br>
+
+
+<a name="feature_selection">
+</a><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?whiteson:gecco05">
+    <b>AUTOMATIC FEATURE SELECTION IN NEUROEVOLUTION</b></a><br>
+    Shimon Whiteson, Peter Stone, Kenneth O. Stanley, Risto
+    Miikkulainenn and Nate Kohl <br>
+    Department of Computer Sciences, The University of Texas at
+    Austin<br>
+    To appear in:<cite>Proceedings of the Genetic and Evolutionary
+  Computation Conference (GECCO-2005)</cite>. <br>
+<b>Comment</b>: Describes how starting NEAT with most inputs
+disconnected and letting NEAT decide which ones to connect is
+more effective than starting with all inputs connected, particularly
+in problems with many potential inputs.
+<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:ieeetec05">
+<b>REAL-TIME NEUROEVOLUTION IN THE NERO VIDEO GAME</b></a> <br>
+Kenneth O. Stanley, Bobby D. Bryant, and Risto Miikkulainen<br>
+Department of Computer Sciences, The University of Texas at Austin<br>
+<i><a href="https://web.archive.org/web/20150225100420/http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1545941">IEEE
+Transactions on Evolutionary Computation</a></i>, volume 9, number 6, 
+pages 653-668, December 2005.
+<br>
+<b>Comment</b>: Journal paper 
+describes how NEAT was enhanced to run in real-time
+inside a new genre of video game where agents are trained by
+the player during gameplay. 
+
+<br><br>
+
+<a name="go">
+</a><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:gecco04"> <b>EVOLVING
+    A ROVING EYE FOR GO</b></a><br>
+    Kenneth O. Stanley and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at
+    Austin<br>
+    <cite>Proceedings of the Genetic and Evolutionary
+  Computation Conference (GECCO-2004)</cite>. New York, NY:
+    Springer-Verlag, 2004<br>
+<b>Comment</b>: This conference paper describes how a roving eye of a
+fixed input size can be evolved to play Go on boards of different
+sizes, and how an eye trained on a smaller board can go on to learn 
+on a larger board better than an eye trained starting on the
+larger board.
+
+<br><br>
+
+<a name="adaptpaper">
+<b></b></a><b><a href="https://web.archive.org/web/20150225100420/http://www.cs.utexas.edu/users/nn/pub-view.php?RECORD_KEY(Pubs)=PubID&amp;PubID(Pubs)=131">EVOLVING
+ADAPTIVE NEURAL NETWORKS WITH AND WITHOUT ADAPTIVE SYNAPSES
+</a></b><br>
+    Kenneth O. Stanley, Bobby D. Bryant, and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at
+    Austin<br>
+    <cite>Proceedings of the 2003 IEEE Congress on Evolutionary
+    Computation (CEC-2003)</cite>. Canberra, Australia: IEEE Press, 2003<br>
+<b>Comment</b>: Conference paper describing experiments evolving
+neural networks with synpatic weights that change over time according
+to local Hebbian rules.  Explains how traits are used in NEAT: See
+Section 2.4 of this paper.  Traits are referred to as a <i>rule
+set</i> in the paper.
+<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:jair04">
+<b>  COMPETITIVE COEVOLUTION THROUGH EVOLUTIONARY COMPLEXIFICATION </b></a><br>
+Kenneth O. Stanley and Risto Miikkulainen<br>
+Department of Computer Sciences, The University of Texas at Austin<br>
+<a href="https://web.archive.org/web/20150225100420/http://www.jair.org/"><i>Journal of Artificial Intelligence
+Research</i></a> 21: 63-100, 2004.<br>
+<b>Comment</b>:  This 38 page journal article expands on the
+importance complexification from a minimal starting point, and shows
+how it leads to the discovery of more complex structures than would
+otherwise be possible.
+<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:gecco02a"> <b>CONTINUAL COEVOLUTION THROUGH COMPLEXIFICATION</b></a><br>
+    Kenneth O. Stanley and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at Austin<br>
+    To appear in <cite>Proceedings of the Genetic and Evolutionary
+  Computation Conference (GECCO-2002)</cite>. San Francisco, CA:
+    Morgan Kaufmann, 2002<br>
+<b>Comment</b>:  Conference paper about using the idea of complexification in
+    NEAT to allow for continual elaboration on strategies leading
+    to a sustained arms race in competitive coevolution.
+
+<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/pub-view.php?PubID=114">
+<b>EFFICIENT EVOLUTION OF NEURAL NETWORK TOPOLOGIES</b></a><br>
+    Kenneth O. Stanley and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at Austin<br>
+    <cite>Proceedings of the 2002 Congress on
+    Evolutionary Computation</cite> (CEC '02). Piscataway, NJ: IEEE, 2002<br>
+<b>Comment</b>: A short conference paper that describes NEAT from the
+    perspective of deconstructing the system using ablation
+    studies.
+
+<br><br>
+
+<b><a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:gecco02b">EFFICIENT REINFORCEMENT
+    LEARNING THROUGH EVOLVING NEURAL NETWORK TOPOLOGIES</a></b><br>
+    Kenneth O. Stanley and Risto Miikkulainen <br>
+    Department of Computer Sciences, The University of Texas at Austin<br>
+    To appear in <cite>Proceedings of the Genetic and Evolutionary
+  Computation Conference (GECCO-2002)</cite>. San Francisco, CA:
+    Morgan Kaufmann, 2002<br>
+<b>Comment</b>: A conference paper that describes NEAT from the point
+of view of performance and visualization.<br>
+<b>Winner of the <a href="https://web.archive.org/web/20150225100420/http://www-illigal.ge.uiuc.edu:8080/gecco-2002/awards-winners.html">
+Best Paper Award </a> in Genetic Algorithms </b>
+<br><br>
+
+<a href="https://web.archive.org/web/20150225100420/http://nn.cs.utexas.edu/keyword?stanley:ec02"> 
+<b> EVOLVING NEURAL NETWORKS THROUGH AUGMENTING TOPOLOGIES</b></a><br>
+Kenneth O. Stanley and Risto Miikkulainen <br>
+Department of Computer Sciences, The University of Texas at Austin<br>
+<a href="https://web.archive.org/web/20150225100420/http://www-mitpress.mit.edu/catalog/item/default.asp?ttype=4&amp;tid=25"><cite>Evolutionary Computation</cite></a> 10(2):99-127, 2002.
+<!-- Technical Report TR-AI-01-290, June 2001. -->
+<br>
+<b>Comment</b>: A journal paper including a comprehensive description of
+the NEAT method, as well as substantial background information
+and performance analysis.  Should be useful for implementing your
+own version of NEAT.
+
+
+</p><p>
+Note: <i>A complete list of my publications can be found on my <a href="https://web.archive.org/web/20150225100420/http://www.cs.ucf.edu/~kstanley">homepage</a>.</i>
+
+<br><br>
+
+
+</p><h3> Contact me here: </h3>
+<a href="https://web.archive.org/web/20150225100420/mailto:kstanley@cs.ucf.edu">kstanley@cs.ucf.edu</a>
+
+<br><br>Last Updated 12/12/14<br><br>
+
+
+<a name="updates"> 
+<i><b>Updates:</b> This page has been substantially revised on
+8/31/03. 
+New answers were added to the ends of both FAQs
+as of 5/8/03.  A </i></a><i><a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#adaptpaper">new paper</a> on evolving
+synaptic plasticity (using traits) is available through the this page as of
+6/22/03. A NEAT User's Group opened on Yahoo on 8/26/03.
+More projects listed on 12/4/03.  On 12/21/03 Mattias Fagerlund
+released full source code and demos for Delphi NEAT.
+2/16/04: A <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#disconnected"> new question </a> explains how
+to start NEAT with genomes with some inputs initially disconnected
+from the the network.
+3/5/04: The <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#disconnected"> question on starting disconnected
+</a>
+now links to code for mutate_add_sensor both in Java and C++.  
+3/24/04: Added <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#go"> link </a> to new paper on evolving a
+roving eye with
+NEAT for Go. 4/7/04: Added link to SharpNEAT, a new NEAT software
+package. 
+6/9/04: Added link to ANJI (Another NEAT Java Implementation).
+9/14/04: Added <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#xor">question and answer</a> about testing
+with XOR. 
+9/15/04: Elaborated answer on testing with XOR.
+10/27/04: Added 2 more papers to the publications list. 
+5/4/05: Added 2 more papers (feature selection and NERO award winner)
+and updated answers to FAQ questions on starting with some inputs
+disconnected, also pointing them to the new paper.
+9/7/05: Linked Ashot Petrosian's <a href="https://web.archive.org/web/20150225100420/https://www.cs.ucf.edu/~kstanley/neat.html#neatref">NEAT Code Documentation</a>
+1/20/06: Changed link to NERO tech report to the journal paper that
+replaced it.
+9/8/06: Added links to rtNEAT source code and NEAT4J, a new Java-based NEAT release.
+10/12/06: Updated answer to question, "Can I start NEAT with some inputs disconnected?"
+5/20/07: Added link to EPlex in intro text.
+1/10/08: Fixed broken links, updated out-of-date text, added HyperNEAT links.
+1/16/08: Updated answer to "Have you tried using non-sigmoid activation
+functions" to cite CPPNs.
+4/24/08: Added link to my original notes wherein I thought of the NEAT
+algorithm.  
+5/9/08: Updated mention of HyperNEAT at top of page to link to more papers. 
+2/8/09: Added link to eplex publications. 
+4/17/09: Linked to HyperNEAT Users Page.
+1/6/10: Removed broken link to NEAT Code Documentation.   
+3/9/10: Fixed link to DelphiNEAT (now goes to eplex server) 
+6/15/10: Added links to NEAT4J and Encog NEAT.
+7/19/10: Added question, "Can you explain some of the NEAT Parameters?" 
+7/19/10: Added link to Wesley Tansey's SharpNEAT 2 TTT tutorial. 
+9/5/11: Small change to HyperNEAT text and links at top of page.
+1/12/12: Added link to ObjectiveNEAT package.
+9/19/12: Added link to Peter Chervenski's MultiNEAT software package.
+3/2/13: Added link to Eric Laukien's NEAT Visualizer package. 
+9/17/13: Added link to Fernando Torres' reorganized github version of 
+NEAT C++. 
+4/21/14: Added link to Fred Mitchell's RubyNEAT platform. 
+10/30/14: Added link to Sean Dougherty's AccNEAT software package.
+12/12/14: Added link to Daniel Jallov's UnityNEAT software package.
+</i><p><i>
+</i>
+
+</p></blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

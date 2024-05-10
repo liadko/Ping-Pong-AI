@@ -1,6 +1,6 @@
 #include "headers.hpp"
 #include "simulation.hpp"
-
+#include "neural_network.hpp"
 
 // return true on success? maybe?
 void mainLoop(sf::RenderWindow& window);
@@ -26,6 +26,8 @@ void mainLoop(sf::RenderWindow& window)
 {
 
     Simulation simulation;
+
+    NeuralNetwork network(3, 1, 1);
 
     int frame_count = 0;
     sf::Clock clock;
@@ -56,14 +58,16 @@ void mainLoop(sf::RenderWindow& window)
         //if (frame_count % 100 == 0)
         //    cout << (1 / dt) << "\n";
         
-        simulation.handleKeys(dt);
+        //simulation.handleKeys(dt);
 
         // Graphics
         window.clear(sf::Color::Black);
 
-        simulation.update(dt);
+        //simulation.update(dt);
         
-        simulation.draw(window);
+        //simulation.draw(window);
+
+        network.draw(window);
 
         window.display(); // Render to screen
 
