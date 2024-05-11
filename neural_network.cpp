@@ -6,33 +6,32 @@ NeuralNetwork::NeuralNetwork(int input_nodes, int hidden_nodes, int output_nodes
     : input_count(input_nodes), output_count(output_nodes), initial_hidden_count(hidden_nodes)
 {
 
-    layer_count = 2;
+    layer_count = 3;
 
-    int layer_index = 0;
     for (int i = 0; i < input_nodes; i++)
     {
-        nodes[current_node_id] = Node(current_node_id, layer_index);
-
-        current_node_id++;
+        nodes.emplace_back(nodes.size(), 0);
     }
-
-    if (hidden_nodes > 0)
-    {
-        layer_count++;
-        layer_index++;
-    }
-    for (int i = 0; i < hidden_nodes; i++)
-    {
-        nodes[current_node_id] = Node(current_node_id, layer_index);
-        current_node_id++;
-    }
-
-    layer_index++;
     for (int i = 0; i < output_nodes; i++)
     {
-        nodes[current_node_id] = Node(current_node_id, layer_index);
+        nodes.emplace_back(nodes.size(), 2);
+    }
 
-        current_node_id++;
+    for (int i = 0; i < hidden_nodes; i++)
+    {
+        nodes.emplace_back(nodes.size(), 1);
+    }
+
+    // connections
+    for (int hidden_i = input_nodes + output_nodes; hidden_i < nodes.size(); hidden_i++)
+    {
+        // from input to hidden
+        for (int input_i = 0; input_i < input_nodes; input_i++)
+            addConnection(input_i, hidden_i);
+
+        // from hidden to output
+        for (int output_i = 0; output_i < output_nodes; output_i++)
+            addConnection(hidden_i, input_nodes + output_i);
     }
 
 
@@ -53,7 +52,7 @@ void NeuralNetwork::draw(sf::RenderWindow& window)
     sf::CircleShape circle(30);
     circle.setOutlineColor(sf::Color::White);
     circle.setOutlineThickness(2);
-    circle.setFillColor(sf::Color::Transparent);
+    circle.setFillColor(sf::Color::Black);
     circle.setOrigin(circle.getRadius(), circle.getRadius());
 
     float subsection_size = size.x / layer_count;
@@ -62,27 +61,54 @@ void NeuralNetwork::draw(sf::RenderWindow& window)
     int* indices_within_layer = new int[layer_count]();
 
 
-    for (int i = 0; i < MAX_NODES; i++)
+    for (Node& node : nodes)
     {
-        if (!nodes[i].active) continue;
+        if (!node.active) continue;
 
-        Node node = nodes[i];
-
-        float x = pos.x + subsection_size * node.layer + subsection_size / 2.0f;
+        node.pos_x = pos.x + subsection_size * node.layer + subsection_size / 2.0f;
 
 
         float layer_box_height = size.y / layer_sizes[node.layer];
-        float y = pos.y + layer_box_height * indices_within_layer[node.layer] + layer_box_height / 2.0f;
+        node.pos_y = pos.y + layer_box_height * indices_within_layer[node.layer] + layer_box_height / 2.0f;
         indices_within_layer[node.layer]++;
 
-
-
-        circle.setPosition(x, y);
-        window.draw(circle);
     }
 
-
     delete[] layer_sizes;
+    delete[] indices_within_layer;
+
+    for (const Connection& con : connections)
+    {
+        if (!con.enabled) continue;
+
+
+        Node& in = nodes[con.in_node];
+        Node& out = nodes[con.out_node];
+
+
+        sf::Vertex line[] = { 
+            sf::Vertex({in.pos_x, in.pos_y}, sf::Color::Green),
+            sf::Vertex({out.pos_x, out.pos_y}, sf::Color::Green),
+        };
+
+        window.draw(line, 2, sf::Lines);
+    }
+
+    for (Node& node : nodes)
+    {
+        if (!node.active) continue;
+
+        circle.setPosition(node.pos_x, node.pos_y);
+        window.draw(circle);
+    }
+}
+
+void NeuralNetwork::addConnection(int in, int out)
+{
+    Node& out_node = getNode(out);
+    out_node.incoming_connection_count++;
+
+    connections.emplace_back(in, out);
 }
 
 // remember to free the memory after calling this function
@@ -90,11 +116,19 @@ int* NeuralNetwork::getLayerSizes()
 {
     int* layer_sizes = new int[layer_count]();
 
-    for (int i = 0; i < MAX_NODES; i++)
+    for (const Node& node : nodes)
     {
-        if (nodes[i].active)
-            layer_sizes[nodes[i].layer]++;
+        if (!node.active) continue;
+
+        layer_sizes[node.layer]++;
     }
 
     return layer_sizes;
+}
+
+NeuralNetwork::Node& NeuralNetwork::getNode(int node_id)
+{
+    if (node_id < 0 || node_id >= nodes.size()) throw std::out_of_range("No Node with id: " + std::to_string(node_id));
+
+    return nodes[node_id];
 }

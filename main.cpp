@@ -27,7 +27,7 @@ void mainLoop(sf::RenderWindow& window)
 
     Simulation simulation;
 
-    NeuralNetwork network(3, 1, 1);
+    NeuralNetwork network(3, 1, 2);
 
     int frame_count = 0;
     sf::Clock clock;
