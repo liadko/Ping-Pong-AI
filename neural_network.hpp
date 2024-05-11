@@ -10,10 +10,12 @@ private:
         bool active;
         
         int id;
-        int layer;
+        int layer = -1;
         float input = -1.0f, output = -1.0f;
 
+        // for layer ordering
         int incoming_connection_count = 0;
+        int temp_connection_count = -1;
 
         // for drawing
         float pos_x = 0, pos_y = 0;
@@ -23,18 +25,22 @@ private:
             active(false), input(69.69f) {}
         
         // useful ctor
-        Node(int id, int layer) : 
-            id(id), layer(layer), active(true) {}
+        Node(int id) : 
+            id(id), active(true) {}
     };
+
+
     struct Connection {
         bool enabled = true;
 
-        int in_node, out_node;
+        int in_node_id, out_node_id;
         float weight = 1; 
 
-        
+        // for layer ordering
+        bool traversed = false;
+
         Connection(int in, int out) :
-            in_node(in), out_node(out) {}
+            in_node_id(in), out_node_id(out) {}
     };
 
     int layer_count;
@@ -54,10 +60,12 @@ private:
 public:
     NeuralNetwork(int input_nodes, int hidden_nodes, int output_nodes);
 
+    void orderLayers();
+
     void addNode();
     void addConnection(int in, int out);
     void mutate();
-    void loadInputs(vector<float> inputs);
+    void loadInputs(const vector<float>& inputs);
     void runNetwork();
     void updateLayers(); // each node 
 
