@@ -27,3 +27,33 @@ void drawVector(const v2f& origin, const v2f& direction, sf::Color color, sf::Re
 
     window.draw(line, 2, sf::Lines);
 }
+
+void printVec(const vector<float>& vec) {
+    // Print opening bracket
+    std::cout << "[ ";
+
+    // Iterate over the elements of the vector
+    for (size_t i = 0; i < vec.size(); ++i) {
+        // Print each element with fixed precision and width
+        std::cout << std::fixed << std::setw(7) << std::setprecision(3) << vec[i];
+
+        // Print comma and space if it's not the last element
+        if (i < vec.size() - 1) {
+            std::cout << ", ";
+        }
+    }
+
+    // Print closing bracket
+    std::cout << " ]" << std::endl;
+}
+
+string floatString(float f)
+{
+    string s = std::to_string(f);
+    return s.substr(0, s.find(".") + 3);
+}
+
+float randFloat()
+{
+    return rand() / (float)RAND_MAX;
+}

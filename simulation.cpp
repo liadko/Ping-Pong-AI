@@ -3,7 +3,6 @@
 
 Simulation::Simulation() : paddle(WIDTH / 2, 700), ball({ WIDTH/2, 200 })
 {
-    srand(time(NULL));
 
 
 }
@@ -52,7 +51,7 @@ bool Simulation::handleHit()
     
     v2f hit_direction = paddle.velocity;
     hit_direction.x *= 0.5f;
-    hit_direction.x += rand() / (float)RAND_MAX * 10;
+    hit_direction.x += randFloat() * 10;
 
 
     float reflection_weight = 0.9f;

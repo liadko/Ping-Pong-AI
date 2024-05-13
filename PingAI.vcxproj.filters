@@ -33,6 +33,9 @@
     <ClCompile Include="neural_network.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="population.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers.hpp">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="neural_network.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="population.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

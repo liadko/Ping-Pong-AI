@@ -43,31 +43,53 @@ private:
             in_node_id(in), out_node_id(out) {}
     };
 
-    int layer_count;
-
     int input_count, output_count;
 
-    float initial_connection_percentage;
+    int layer_count;
+    vector<int> layer_sizes;
+
+    //float initial_connection_percentage;
     int initial_hidden_count;
 
 
     vector<Node> nodes;
     vector<Connection> connections;
+    // for drawing
+    sf::Font bold_font, regular_font;
 
-    int* getLayerSizes();
-    Node& getNode(int node_id);
+    // for drawing
+    void initFonts();
 
-public:
-    NeuralNetwork(int input_nodes, int hidden_nodes, int output_nodes);
+    // for running
+    float fitness;
 
+
+    // layers
+    void updateLayerSizes();
     void orderLayers();
 
-    void addNode();
-    void addConnection(int in, int out);
-    void mutate();
     void loadInputs(const vector<float>& inputs);
-    void runNetwork();
-    void updateLayers(); // each node 
+    void initWeights();
+    Node& getNode(int node_id);
 
+
+    float activationFunction(float x);
+
+public:
+    // set up
+    NeuralNetwork(int input_nodes, int hidden_nodes, int output_nodes);
+    
+
+    // mutations
+    void addNode(); // remember to call orderLayers after doing this
+    void addConnection(int in, int out); // remember to call orderLayers after doing this
+    void mutate();
+
+    // running
+    vector<float> runNetwork(const vector<float>& inputs);
+    float getFitness() const { return fitness; };
+    void setFitness(float fitness) { this->fitness = fitness; };
+
+    // drawing
     void draw(sf::RenderWindow& window);
 };

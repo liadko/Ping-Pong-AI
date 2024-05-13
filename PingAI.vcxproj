@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +138,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="neural_network.cpp" />
     <ClCompile Include="paddle.cpp" />
+    <ClCompile Include="population.cpp" />
     <ClCompile Include="simulation.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
@@ -145,6 +147,7 @@
     <ClInclude Include="headers.hpp" />
     <ClInclude Include="neural_network.hpp" />
     <ClInclude Include="paddle.hpp" />
+    <ClInclude Include="population.hpp" />
     <ClInclude Include="simulation.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>

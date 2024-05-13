@@ -7,6 +7,7 @@
 
 
 #include <vector>
+#include <string>
 #include <iostream>
 #include <cmath>
 
@@ -14,7 +15,7 @@
 typedef sf::Vector2f v2f;
 typedef sf::Vector2i v2i;
 
-using std::cout;
+using std::cout, std::cerr;
 using std::vector;
 using std::string;
 

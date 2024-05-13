@@ -1,12 +1,16 @@
 #include "headers.hpp"
 #include "simulation.hpp"
 #include "neural_network.hpp"
+#include "population.hpp"
+#include "utils.hpp"
 
 // return true on success? maybe?
 void mainLoop(sf::RenderWindow& window);
 
 int main()
 {
+    srand(time(NULL));
+
     //Window
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Program", sf::Style::Close, sf::ContextSettings(24, 8, 8));
 
@@ -27,7 +31,9 @@ void mainLoop(sf::RenderWindow& window)
 
     Simulation simulation;
 
-    NeuralNetwork network(4, 3, 3);
+    NeuralNetwork network(2, 1, 1);
+
+    Population population(150);
 
     int frame_count = 0;
     sf::Clock clock;
@@ -43,8 +49,14 @@ void mainLoop(sf::RenderWindow& window)
             else if (event.type == sf::Event::KeyPressed)
             {
                 if (event.key.code == sf::Keyboard::Escape) return;
-                if (event.key.code == sf::Keyboard::Space) 
-                    simulation.spacePressed();
+                if (event.key.code == sf::Keyboard::Space)
+                {
+                    //cout << "Network Output: ";
+                    //printVec(network.runNetwork({ 1, 0 }));
+
+                    population.runNets();
+                }
+                    //simulation.spacePressed();
             }
             else if (event.type == sf::Event::MouseMoved)
             {
@@ -67,7 +79,7 @@ void mainLoop(sf::RenderWindow& window)
         
         //simulation.draw(window);
 
-        network.draw(window);
+        population.getNet().draw(window);
 
         window.display(); // Render to screen
 
