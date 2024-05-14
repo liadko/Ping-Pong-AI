@@ -52,6 +52,38 @@ NeuralNetwork::NeuralNetwork(int input_nodes, int hidden_nodes, int output_nodes
     initFonts();
 }
 
+
+void NeuralNetwork::mutate()
+{
+    mutateWeights();
+}
+
+
+void NeuralNetwork::mutateWeights()
+{
+    for (Connection& connection : connections)
+    {
+        // pertrube
+        if (randFloat() < 0.9)
+            connection.weight += randFloatCentered() * weight_perturbation;
+        else // reset completely
+            connection.weight = randFloatCentered() * weight_reset_max;
+    }
+}
+
+
+
+
+void NeuralNetwork::addConnection(int in, int out)
+{
+    Node& out_node = getNode(out);
+    out_node.incoming_connection_count++;
+
+    connections.emplace_back(in, out);
+}
+
+
+
 void NeuralNetwork::initFonts()
 {
     bold_font.loadFromFile("fonts/Montserrat-Bold.ttf");
@@ -63,6 +95,8 @@ void NeuralNetwork::initWeights()
     for (Connection& connection : connections)
         connection.weight = (2 * randFloat() - 1) * 0.1f;
 }
+
+
 void NeuralNetwork::orderLayers()
 {
 
@@ -130,6 +164,22 @@ void NeuralNetwork::orderLayers()
     updateLayerSizes();
 }
 
+
+
+void NeuralNetwork::updateLayerSizes()
+{
+    layer_sizes.resize(layer_count);
+
+    for (const Node& node : nodes)
+    {
+        if (!node.active || node.id == 0) continue;
+
+        layer_sizes[node.layer]++;
+    }
+
+}
+
+
 void NeuralNetwork::loadInputs(const vector<float>& inputs)
 {
     if (inputs.size() != input_count)
@@ -144,6 +194,8 @@ void NeuralNetwork::loadInputs(const vector<float>& inputs)
         nodes[i + 1].output = inputs[i]; // straight to the node's output
     }
 }
+
+
 
 vector<float> NeuralNetwork::runNetwork(const vector<float>& inputs)
 {
@@ -187,6 +239,19 @@ vector<float> NeuralNetwork::runNetwork(const vector<float>& inputs)
     }
 
     return output;
+}
+
+
+NeuralNetwork::Node& NeuralNetwork::getNode(int node_id)
+{
+    if (node_id < 0 || node_id >= nodes.size()) throw std::out_of_range("No Node with id: " + std::to_string(node_id));
+
+    return nodes[node_id];
+}
+
+float NeuralNetwork::activationFunction(float x)
+{
+    return  1.0f / (1.0f + expf(-x));
 }
 
 void NeuralNetwork::draw(sf::RenderWindow& window)
@@ -280,49 +345,21 @@ void NeuralNetwork::draw(sf::RenderWindow& window)
         detail_text.setString(floatString(node.input));
         detail_text.setOrigin(detail_text.getLocalBounds().width / 2.0f, detail_text.getLocalBounds().height / 2.0f);
         detail_text.setPosition(node.pos_x - node_radius * 2 + 5, node.pos_y);
+        if(node.layer == 0) detail_text.setString(floatString(node.output));
+        
         window.draw(detail_text);
+    
 
         detail_text.setString(floatString(node.output));
         detail_text.setOrigin(detail_text.getLocalBounds().width / 2.0f, detail_text.getLocalBounds().height / 2.0f);
         detail_text.setPosition(node.pos_x + node_radius * 2 + 1, node.pos_y);
-        window.draw(detail_text);
+        
+        if (node.layer != 0)
+            window.draw(detail_text);
     }
 
 
-    sf::Text description("Fitness: " + , regular_font, 14);
-
-}
-
-void NeuralNetwork::addConnection(int in, int out)
-{
-    Node& out_node = getNode(out);
-    out_node.incoming_connection_count++;
-
-    connections.emplace_back(in, out);
-}
-
-void NeuralNetwork::updateLayerSizes()
-{
-    layer_sizes.resize(layer_count);
-
-    for (const Node& node : nodes)
-    {
-        if (!node.active || node.id == 0) continue;
-
-        layer_sizes[node.layer]++;
-    }
-
-}
-
-
-NeuralNetwork::Node& NeuralNetwork::getNode(int node_id)
-{
-    if (node_id < 0 || node_id >= nodes.size()) throw std::out_of_range("No Node with id: " + std::to_string(node_id));
-
-    return nodes[node_id];
-}
-
-float NeuralNetwork::activationFunction(float x)
-{
-    return  1.0f / (1 + expf(-x));
+    sf::Text description("Fitness: " + floatString(fitness, 5), regular_font, 20);
+    description.setPosition(pos.x + 10, pos.y + size.y - description.getLocalBounds().height - 17);
+    window.draw(description);
 }

@@ -31,9 +31,8 @@ void mainLoop(sf::RenderWindow& window)
 
     Simulation simulation;
 
-    NeuralNetwork network(2, 1, 1);
 
-    Population population(150);
+    Population population;
 
     int frame_count = 0;
     sf::Clock clock;
@@ -54,7 +53,11 @@ void mainLoop(sf::RenderWindow& window)
                     //cout << "Network Output: ";
                     //printVec(network.runNetwork({ 1, 0 }));
 
-                    population.runNets();
+                    population.progressGeneration();
+
+
+                    cout << population.getNet().runNetwork({ 0, 0 })[0] << " " << population.getNet().runNetwork({ 1, 0 })[0] << "\n";
+                    cout << population.getNet().runNetwork({ 0, 1 })[0] << " " << population.getNet().runNetwork({ 1, 1 })[0] << "\n\n";
                 }
                     //simulation.spacePressed();
             }
@@ -80,6 +83,9 @@ void mainLoop(sf::RenderWindow& window)
         //simulation.draw(window);
 
         population.getNet().draw(window);
+
+
+
 
         window.display(); // Render to screen
 

@@ -53,7 +53,20 @@ string floatString(float f)
     return s.substr(0, s.find(".") + 3);
 }
 
+string floatString(float f, int decimals)
+{
+    string s = std::to_string(f);
+    return s.substr(0, s.find(".") + 1 + decimals);
+}
+
+
 float randFloat()
 {
     return rand() / (float)RAND_MAX;
+}
+
+
+float randFloatCentered()
+{
+    return 2.0f * rand() / (float)RAND_MAX - 1.0f;
 }

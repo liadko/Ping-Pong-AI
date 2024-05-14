@@ -14,4 +14,7 @@ void printVec(const vector<float>& vec);
 
 string floatString(float f);
 
+string floatString(float f, int decimals);
+
 float randFloat();
+float randFloatCentered();
